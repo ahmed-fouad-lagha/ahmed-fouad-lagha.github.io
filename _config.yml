@@ -39,8 +39,8 @@ author:
   impactstory: # URL
   orcid: "https://orcid.org/0009-0005-8255-9434"
   semantic: # URL
-  pubmed: "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate: "https://www.researchgate.net/profile/Ahmed-Lagha"
+  pubmed: #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  researchgate: #"https://www.researchgate.net/profile/Ahmed-Lagha"
   scopus: # URL
 
   # Repositories and software development
@@ -48,7 +48,7 @@ author:
   codepen: # Username
   dribbble: # Username
   github: "ahmed-fouad-lagha"
-  kaggle: "ahmedfouadlagha" # Username
+  kaggle: #"ahmedfouadlagha" # Username
   stackoverflow: # User number or user number and name (i.e., use "1" or "1/jeff-atwood")
 
   # Social media
@@ -70,7 +70,7 @@ author:
   steam: # Username
   telegram: # URL
   tumblr: # Username
-  twitter: "ahmedfouadlagha"
+  twitter: #"ahmedfouadlagha"
   vine: # Username
   weibo: # Username
   wikipedia: # Username
