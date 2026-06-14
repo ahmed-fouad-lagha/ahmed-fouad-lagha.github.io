@@ -1,7 +1,7 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
+\usepackage[letterpaper, margin=0.5in, bottom=0.75in, top=0.5in]{geometry}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[dvipsnames]{xcolor}
@@ -11,41 +11,33 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5} % <--- REQUIRED FOR ICONS
+\usepackage{fontawesome5}
 
 % Custom Month-Year command
 \newcommand{\monthyear}{%
   \ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi \space \number\year
 }
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Sections formatting - Balanced
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\hrule \vspace{-5pt}]
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\hrule \vspace{-3pt}]
 
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{0pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
@@ -53,7 +45,7 @@
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -62,39 +54,36 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.20in, itemsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%%%%  RESUME STARTS HERE  %%%%
 
 \begin{document}
 
-%----------LAST UPDATED----------
 \hfill \textcolor{gray}{\small \textit{Last updated in \monthyear}}
 
 \vspace{-15pt}
 
-%----------HEADER----------
 \begin{center}
     {\Huge \scshape Ahmed Fouad Lagha} \\ \vspace{5pt}
-    
-    % TITLE
     \textbf{\Large PhD Researcher @ ELTE $|$ Data Science \& ML} \\ \vspace{5pt}
-    
-    % CONTACT INFO
     \small 
-    \faMapMarker* \hspace{0.5pt} Budapest, Hungary \hspace{10pt} $|$ \hspace{10pt}
-    \faPhone \hspace{0.5pt} (+36) 20 425 52 \hspace{10pt} $|$ \hspace{10pt}
-    \faEnvelope \hspace{0.5pt} \href{mailto:ms5jzx@inf.elte.hu}{\underline{ms5jzx@inf.elte.hu}} \\ \vspace{3pt}
-    
-    \faLinkedin \hspace{0.5pt} \href{https://linkedin.com/in/ahmed-fouad-lagha}{\underline{linkedin.com/in/ahmed-fouad-lagha}} \hspace{10pt} $|$ \hspace{10pt}
-    \faGithub \hspace{0.5pt} \href{https://github.com/ahmed-fouad-lagha}{\underline{github.com/ahmed-fouad-lagha}} \hspace{10pt} $|$ \hspace{10pt}
+    \faMapMarker* \hspace{0.5pt} Budapest, Hungary \hspace{5pt} $|$ \hspace{5pt}
+    \faPhone \hspace{0.5pt} (+36) 20 425 52 \hspace{5pt} $|$ \hspace{5pt}
+    \faEnvelope \hspace{0.5pt} \href{mailto:ahmed.lagha@inf.elte.hu}{\underline{ahmed.lagha@inf.elte.hu}} \\ \vspace{1pt}
+    \faLinkedin \hspace{0.5pt} \href{https://linkedin.com/in/ahmed-fouad-lagha}{\underline{linkedin.com/in/ahmed-fouad-lagha}} \hspace{3pt} $|$ \hspace{3pt}
+    \faGithub \hspace{0.5pt} \href{https://github.com/ahmed-fouad-lagha}{\underline{github.com/ahmed-fouad-lagha}} \hspace{3pt} $|$ \hspace{3pt}
     \faGlobe \hspace{0.5pt} \href{https://ahmed-fouad-lagha.github.io/}{\underline{ahmed-fouad-lagha.github.io}}
 \end{center}
 
-%-----------EXPERIENCE-----------
+\vspace{-15pt}
+
+\section{Summary}
+ {
+  Dedicated PhD Researcher specializing in Privacy-Preserving Machine Learning and Data Science. Proven track record in developing state-of-the-art Deep Learning models and implementing secure AI systems using Federated Learning and Differential Privacy. Experienced in software engineering with a strong background in architecting scalable web applications and LLM-based orchestration pipelines. Committed to advancing the frontier of secure and trustworthy artificial intelligence.
+ }
+
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
@@ -112,7 +101,7 @@
       \resumeItemListStart
         \resumeItem{Implemented federated training flows and applied Differential Privacy techniques for synthetic data generation.}
         \resumeItem{Built evaluation pipelines to quantify privacy--utility tradeoffs and documented results demonstrating improved privacy guarantees with acceptable predictive performance.}
-        \resumeItem{Awarded the \textbf{Stipendium Hungaricum Scholarship} based on academic excellence and research potential.}
+        \resumeItem{Awarded the Stipendium Hungaricum Scholarship based on academic excellence and research potential.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -124,14 +113,12 @@
         \resumeItem{Evaluated system capabilities and requirements through data manipulation, storage, and retrieval optimization.}
         \resumeItem{Collaborated in a remote environment, utilizing project management and creative problem-solving skills to meet technical objectives.}
       \resumeItemListEnd
-
   \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{MyVellum} \href{https://www.myvellum.me}{\faGlobe} $|$ \emph{LLM Orchestration, RAG, Docker, CI/CD}}{Dec. 2025 -- Present}
+          {\textbf{MyVellum} $|$ \emph{LLM Orchestration, RAG, Docker, CI/CD}}{Dec. 2025 -- Present}
           \resumeItemListStart
             \resumeItem{Designed and implemented LLM orchestration and modular prompt templates to standardize model usage across product teams.}
             \resumeItem{Built vector-backed RAG pipelines and context-stitching services to ground model responses and reduce hallucinations in production.}
@@ -172,7 +159,6 @@
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-%-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
@@ -186,7 +172,6 @@
       {B.Sc. in Mathematics and Computer Science, \textbf{GPA: 3.9/4.0}}{Khenchela, Algeria}
   \resumeSubHeadingListEnd
 
-%-----------CERTIFICATIONS-----------
 \section{Certifications}
  \resumeItemListStart
     \resumeItem{\href{https://savanna.alxafrica.com/certificates/YEM9LC5BNm}{\textbf{AI Career Essentials (AiCE) certification}} -- ALX South Africa (Jul. 2024)}
@@ -196,32 +181,16 @@
     \resumeItem{\href{https://www.coursera.org/account/accomplishments/records/UK73ZU6SNA29}{\textbf{Supervised Machine Learning}} -- DeepLearning.AI, Stanford University (Apr. 2024)}
  \resumeItemListEnd
 
-%-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt]
-    \small{\item{
-     \textbf{Languages}{: Python, C/C++, Java, SQL, Bash, JavaScript} \\
-     \textbf{Databases}{: MySQL, SQLite, MongoDB} \\
-     \textbf{Data Science}{: Pandas, NumPy, Matplotlib, Seaborn} \\
-     \textbf{Machine Learning}{: PyTorch, TensorFlow, Keras, Scikit-learn, OpenCV} \\
-     \textbf{Web Development}{: HTML, CSS, Flask, Node.js} \\
-     \textbf{Tools}{: Git, Linux, CI/CD}
-    }}
- \end{itemize}
-
-%-----------LANGUAGES-----------
+  \textbf{Languages}{: Python, C/C++, Java, SQL, Bash, JavaScript}\\[3pt]
+  \textbf{Databases}{: MySQL, SQLite, MongoDB}\\[3pt]
+  \textbf{Data Science}{: Pandas, NumPy, Matplotlib, Seaborn}\\[3pt]
+  \textbf{Machine Learning}{: PyTorch, TensorFlow, Keras, Scikit-learn, OpenCV}\\[3pt]
+  \textbf{Web Development}{: HTML, CSS, Flask, Node.js}\\[3pt]
+  \textbf{Tools}{: Git, Linux, CI/CD}\\[3pt]
+  \textbf{Privacy-Preserving ML}{: Federated Learning, Differential Privacy}
+ 
 \section{Languages}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Arabic}{: Native} \hspace{10pt} $|$ \hspace{10pt}
-     \textbf{English}{: Professional Proficiency} \hspace{10pt} $|$ \hspace{10pt}
-     \textbf{French}{: Intermediate}
-    }}
- \end{itemize}
-
-\end{document}
-ch}{: Intermediate}
-    }}
- \end{itemize}
+    \textbf{Arabic}{: Native} \hspace{2pt} $|$ \hspace{2pt} \textbf{English}{: Professional Proficiency} \hspace{2pt} $|$ \hspace{2pt} \textbf{French}{: Intermediate}
 
 \end{document}
