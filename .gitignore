@@ -6,3 +6,20 @@ _site/
 cnzz_analytics.html
 papers.html
 .jekyll-cache
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+

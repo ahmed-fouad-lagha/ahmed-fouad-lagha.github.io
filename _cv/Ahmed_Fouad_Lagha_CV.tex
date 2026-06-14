@@ -1,0 +1,225 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5} % <--- REQUIRED FOR ICONS
+
+% Custom Month-Year command
+\newcommand{\monthyear}{%
+  \ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi \space \number\year
+}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\hrule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%%%%  RESUME STARTS HERE  %%%%
+
+\begin{document}
+
+%----------LAST UPDATED----------
+\hfill \textcolor{gray}{\small \textit{Last updated in \monthyear}}
+
+\vspace{-15pt}
+
+%----------HEADER----------
+\begin{center}
+    {\Huge \scshape Ahmed Fouad Lagha} \\ \vspace{5pt}
+    
+    % TITLE
+    \textbf{\Large PhD Researcher @ ELTE $|$ Data Science \& ML} \\ \vspace{5pt}
+    
+    % CONTACT INFO
+    \small 
+    \faMapMarker* \hspace{0.5pt} Budapest, Hungary \hspace{10pt} $|$ \hspace{10pt}
+    \faPhone \hspace{0.5pt} (+36) 20 425 52 \hspace{10pt} $|$ \hspace{10pt}
+    \faEnvelope \hspace{0.5pt} \href{mailto:ms5jzx@inf.elte.hu}{\underline{ms5jzx@inf.elte.hu}} \\ \vspace{3pt}
+    
+    \faLinkedin \hspace{0.5pt} \href{https://linkedin.com/in/ahmed-fouad-lagha}{\underline{linkedin.com/in/ahmed-fouad-lagha}} \hspace{10pt} $|$ \hspace{10pt}
+    \faGithub \hspace{0.5pt} \href{https://github.com/ahmed-fouad-lagha}{\underline{github.com/ahmed-fouad-lagha}} \hspace{10pt} $|$ \hspace{10pt}
+    \faGlobe \hspace{0.5pt} \href{https://ahmed-fouad-lagha.github.io/}{\underline{ahmed-fouad-lagha.github.io}}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Teaching Assistant}{Feb. 2026 -- Jun. 2026}
+      {Eötvös Loránd University (ELTE)}{Budapest, Hungary}
+      \resumeItemListStart
+        \resumeItem{Designed practical labs focusing on Adversarial Machine Learning and Privacy-Preserving AI using PyTorch.}
+        \resumeItem{Guided students through the implementation of state-of-the-art attacks, including Evasion (FGSM, PGD), Data Poisoning (Backdoors), and Membership Inference.}
+        \resumeItem{Mentored students on defensive strategies like Differential Privacy (DP-SGD), Federated Learning, and Adversarial Training. Course Link: \href{https://elte-dsed.github.io/Intro-Data-Security/}{\underline{HERE}}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {PhD Researcher (Privacy-Preserving ML)}{Sep. 2025 -- Present}
+      {Eötvös Loránd University (ELTE)}{Budapest, Hungary}
+      \resumeItemListStart
+        \resumeItem{Implemented federated training flows and applied Differential Privacy techniques for synthetic data generation.}
+        \resumeItem{Built evaluation pipelines to quantify privacy--utility tradeoffs and documented results demonstrating improved privacy guarantees with acceptable predictive performance.}
+        \resumeItem{Awarded the \textbf{Stipendium Hungaricum Scholarship} based on academic excellence and research potential.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer Intern}{Jun. 2023 -- Feb. 2025}
+      {ALX Africa}{Remote}
+      \resumeItemListStart
+        \resumeItem{Developed design systems and analyzed project limitations, performance requirements, and interfaces to streamline development.}
+        \resumeItem{Modeled applications and system architectures to assist developers in writing efficient and maintainable code.}
+        \resumeItem{Evaluated system capabilities and requirements through data manipulation, storage, and retrieval optimization.}
+        \resumeItem{Collaborated in a remote environment, utilizing project management and creative problem-solving skills to meet technical objectives.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{MyVellum} $|$ \emph{LLM Orchestration, RAG, Docker, CI/CD}}{Dec. 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Designed and implemented LLM orchestration and modular prompt templates to standardize model usage across product teams.}
+            \resumeItem{Built vector-backed RAG pipelines and context-stitching services to ground model responses and reduce hallucinations in production.}
+            \resumeItem{Integrated automated evaluation gates into CI/CD to track relevance and safety metrics for model updates.}
+            \resumeItem{Owned API design and Docker-based deployment pipelines; mentored two engineers in prompt engineering and testing best practices.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{RayaneBio E-Commerce Platform} $|$ \emph{React, Next.js, HTML, CSS}}{Dec. 2024 -- Mar. 2025}
+          \resumeItemListStart
+            \resumeItem{Architected and deployed a responsive e-commerce platform for organic products resulting in seamless user experiences and increased client satisfaction.}
+            \resumeItem{Implemented advanced product display, secure user authentication, and intuitive navigation features, enhancing customer engagement through integrated testimonials.}
+            \resumeItem{Designed and showcased company values and customer testimonials, driving brand loyalty and positive user feedback.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Discretuna Text Summarizer} $|$ \emph{Python, Flask, NLTK, scikit-learn, HTML, CSS}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a web application for automatic text summarization using the Discrete Tuna Optimization (DTO) algorithm.}
+            \resumeItem{Implemented features for text input/file upload and adjustable summarization parameters.}
+            \resumeItem{Provided statistical analysis of summary quality, including ROUGE score and readability metrics.}
+            \resumeItem{Role: Developer, Link: \href{https://github.com/ahmed-fouad-lagha/discretuna-summarizer}{\underline{GitHub Repo}}}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{E-Learning Platform} \href{https://github.com/ahmed-fouad-lagha/E-Learning_Platform}{\faGithub} $|$ \emph{Node.js, Express.js, MongoDB, React, Redux, SCSS}}{}
+          \resumeItemListStart
+            \resumeItem{Design and implement RESTful APIs for user authentication, course management, and content delivery.}
+            \resumeItem{Developed responsive UI components using React and Redux for an engaging learning experience.}
+            \resumeItem{Integrated secure user authentication and authorization mechanisms.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{WAU-Net} \href{https://github.com/ahmed-fouad-lagha/MS-AGHairNet}{\faGithub} $|$ \emph{Python, TensorFlow, Keras, OpenCV}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered and trained a high-performance deep learning model for hair segmentation using Python, TensorFlow, and Keras, achieving state-of-the-art accuracy on benchmark datasets.}
+            \resumeItem{Designed a comprehensive data augmentation pipeline, significantly improving model generalization and robustness across diverse image conditions.}
+            \resumeItem{Evaluated model efficacy with rigorous metrics, attaining 95.37\% Dice coefficient for efficient real-time deployment.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Eötvös Loránd University (ELTE)}{Sep. 2025 -- Expected 2029}
+      {Ph.D. in Informatics}{Budapest, Hungary}
+      \\[8pt]
+    \resumeSubheading
+      {University of Khenchela}{Sep. 2023 -- Jun. 2025}
+      {M.Sc. in Artificial Intelligence, \textbf{GPA: 3.7/4.0}}{Khenchela, Algeria}
+    \\[8pt]
+    \resumeSubheading
+      {University of Khenchela}{Sep. 2020 -- Jun. 2023}
+      {B.Sc. in Mathematics and Computer Science, \textbf{GPA: 3.9/4.0}}{Khenchela, Algeria}
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+ \resumeItemListStart
+    \resumeItem{\href{https://savanna.alxafrica.com/certificates/YEM9LC5BNm}{\textbf{AI Career Essentials (AiCE) certification}} -- ALX South Africa (Jul. 2024)}
+    \resumeItem{\href{https://www.datacamp.com/completed/statement-of-accomplishment/course/bb5dba576c82168b0fb58f231edd494cb2749eb0}{\textbf{Introduction to Deep Learning with PyTorch}} -- Datacamp (Feb. 2025)}
+    \resumeItem{\href{https://savanna.alxafrica.com/certificates/yNTLX6BYHR}{\textbf{ALX Software Engineering with a specialization in Back-end}} -- ALX Africa (Feb. 2025)}
+    \resumeItem{\href{https://www.coursera.org/account/accomplishments/verify/ZJWBYNRZ8WXK}{\textbf{Advanced Learning Algorithms}} -- DeepLearning.AI, Stanford University (Apr. 2024)}
+    \resumeItem{\href{https://www.coursera.org/account/accomplishments/records/UK73ZU6SNA29}{\textbf{Supervised Machine Learning}} -- DeepLearning.AI, Stanford University (Apr. 2024)}
+ \resumeItemListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C/C++, Java, SQL, Bash, JavaScript} \\
+     \textbf{Databases}{: MySQL, SQLite, MongoDB} \\
+     \textbf{Data Science}{: Pandas, NumPy, Matplotlib, Seaborn} \\
+     \textbf{Machine Learning}{: PyTorch, TensorFlow, Keras, Scikit-learn, OpenCV} \\
+     \textbf{Web Development}{: HTML, CSS, Flask, Node.js} \\
+     \textbf{Tools}{: Git, Linux, CI/CD}
+    }}\\[-6pt]
+ \end{itemize}
+
+%-----------LANGUAGES-----------
+\section{Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Arabic}{: Native} $|$ 
+     \textbf{English}{: Professional Proficiency} $|$ 
+     \textbf{French}{: Intermediate}
+    }}
+ \end{itemize}
+
+\end{document}
