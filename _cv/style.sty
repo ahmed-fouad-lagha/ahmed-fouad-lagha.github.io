@@ -6,7 +6,7 @@
 \RequirePackage[T1]{fontenc} %  Font encoding https://texfaq.org/FAQ-why-inp-font
 \RequirePackage[default,semibold]{sourcesanspro}
 \RequirePackage[10pt]{moresize}
-\usepackage{anyfontsize}
+\RequirePackage{anyfontsize}
 \RequirePackage{csquotes}
 
 % MARGINS AND SPACING
@@ -35,7 +35,7 @@
 \titleformat{\subsection}{\bfseries}{}{0em}{#1}[]
 
 % BOLD COMMAND
-\newcommand{\skills}[1]{ {\bfseries #1}}
+\newcommand{\skills}[1]{\textbf{#1}}
 
 % SUBTEXT
 \newcommand{\subtext}[1]{\textit{#1}\par\vspace{-.5em}}
