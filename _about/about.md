@@ -15,6 +15,10 @@ My work primarily revolves around:
 *   **Generative Models:** Leveraging GANs and other generative architectures for robust data modeling.
 *   **Machine Learning Security:** Ensuring the integrity and confidentiality of ML pipelines.
 
+### Teaching & Mentoring
+* **Course Labs Developer:** Designing and teaching practical lab sessions for the [IDaSec Practicum](https://elte-dsed.github.io/Intro-Data-Security/) (Introduction to Data Security) at ELTE.
+* **Student Supervision:** Mentoring and supervising B.Sc. and M.Sc. students in secure machine learning implementations, differential privacy, and thesis research.
+
 ### Professional Goal
 My goal is to bridge the gap between advanced machine learning capabilities and the fundamental right to data privacy, enabling data-driven innovation that is both ethical and secure.
 
