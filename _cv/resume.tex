@@ -1,0 +1,121 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{TLCresume}
+
+%====================
+% CONTACT INFORMATION
+%====================
+\def\name{Ahmed Fouad Lagha}
+\def\phone{(+36) 204255258}
+\def\city{Budapest, Hungary}
+\def\email{ahmed.lagha@inf.elte.hu}
+\def\LinkedIn{ahmed-fouad-lagha}
+\def\github{ahmed-fouad-lagha}
+\def\role{PhD Researcher}
+\def\portfoliourl{https://ahmed-fouad-lagha.github.io}
+\def\portfolioname{ahmed-fouad-lagha.github.io}
+
+%====================
+% Header: Contact
+%====================
+
+\RequirePackage{fancyhdr}
+
+\fancypagestyle{first_page}{
+	\fancyhf{}
+	\lhead{
+		\phone \\ % PHONE    
+		\city \\ % CITI
+		\href{mailto:\email}{\email} % EMAIL
+	}
+	\chead{
+		\centering
+		{\Huge \skills \name} \\
+		\vspace{.25em}
+		{\color{highlight} \Large{\role}}
+	}
+	\rhead{
+		\href{\portfoliourl}{\portfolioname} \\ % Portfolio
+		\href{https://github.com/\github}{github.com/\github} \\% Github
+		\href{https://www.linkedin.com/in/\LinkedIn}{linkedin.com/in/\LinkedIn} % LinkedIn
+	}
+	\renewcommand{\headrulewidth}{1pt} % 2pt header rule
+	\renewcommand{\headrule}{\hbox to\headwidth{\color{highlight}\leaders\hrule height \headrulewidth\hfill}}
+	\setlength{\headheight}{75pt}
+	\setlength{\headsep}{5pt}
+}
+
+\fancypagestyle{others}{
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}
+	\setlength{\headheight}{30pt}
+	\setlength{\headsep}{5pt}
+}
+
+\begin{document}\pagestyle{others}\thispagestyle{first_page}
+
+PhD candidate in privacy-preserving ML with hands-on experience building ML models, LLM systems, and production web applications. Looking for a data science internship to apply strong analytical, engineering, and problem-solving skills to real-world data challenges.
+
+\section{Technical Skills}
+\vspace{0.3em}
+\begin{tabular}{p{10em} p{1em} p{38em}}
+\skills{Languages \& Tools} & & Python, SQL, C/C++, Java, Bash, Docker, Git, Linux, CI/CD, Flask, REST APIs \\
+\skills{ML \& Data Science} & & PyTorch, Scikit-learn, OpenCV, Pandas, NumPy, Matplotlib, Seaborn, SciPy \\
+\skills{Privacy-Preserving ML} & & Federated Learning, Differential Privacy (DP-SGD) \\
+\skills{Databases} & & MySQL, SQLite, MongoDB \\
+\end{tabular}
+
+
+\section{Experience}
+\subsection{PhD Researcher --- Privacy-Preserving ML \texorpdfstring{\hfill}{ } Sep. 2025 -- Present}
+\subtext{E\"otv\"os Lor\'and University (ELTE) \hfill Budapest, Hungary}
+\begin{zitemize}
+    \item Designing federated learning pipelines with differential privacy (DP-SGD) for synthetic data generation, achieving $\varepsilon=1$ privacy guarantees while preserving model utility
+    \item Building reusable evaluation pipelines to benchmark privacy--utility tradeoffs across models and datasets, enabling reproducible research
+    \item Developing and delivering a lab on synthetic data generation with differential privacy for the Data Security course; mentoring 2 graduate students on DP-SGD and adversarial ML
+    \item Awarded the Stipendium Hungaricum Scholarship --- a competitive Hungarian government grant for academic excellence and research potential
+\end{zitemize}
+
+\subsection{Software Engineer Intern \texorpdfstring{\hfill}{ } Jun. 2023 -- Feb. 2025}
+\subtext{ALX Africa \hfill Remote}
+\begin{zitemize}
+    \item Built and shipped full-stack applications using Python, Flask, and SQL, delivering RESTful APIs for production use
+    \item Designed normalized database schemas and optimized SQL queries, improving storage efficiency and cutting response times
+    \item Collaborated within a distributed engineering team using Git, code reviews, and agile methodologies
+\end{zitemize}
+
+\section{Projects}
+\subsection{MyVellum \texorpdfstring{\hfill}{ } Dec. 2025 -- Present}
+\subtext{LLM Orchestration, RAG, Docker, CI/CD}
+\begin{zitemize}
+    \item Architected an LLM orchestration system with modular prompt templates for an AI-powered autobiography platform serving 1,000+ users
+    \item Developed vector-backed RAG pipelines with context-stitching, reducing hallucination rates in generated responses
+    \item Integrated automated evaluation gates into CI/CD for relevance and safety metrics, ensuring quality across deployments
+    \item Owned end-to-end API design and Docker deployment; mentored two engineers on prompt engineering best practices
+\end{zitemize}
+
+\subsection{WAU-Net \texorpdfstring{\hfill}{ } Jan. 2025 -- Jun. 2025}
+\subtext{Master's Thesis --- Python, PyTorch, OpenCV}
+\begin{zitemize}
+    \item Designed a custom deep learning architecture for hair segmentation, achieving a 95.37\% Dice coefficient on the benchmark dataset
+    \item Engineered a data augmentation pipeline that improved generalization across diverse image conditions, reducing overfitting by 15\%
+    \item Evaluated model performance with precision, recall, and F1-score; optimized inference pipeline for real-time deployment
+\end{zitemize}
+
+\section{Education}
+\subsection{PhD in Informatics --- Privacy-Preserving Machine Learning \texorpdfstring{\hfill}{ } Sep. 2025 -- Expected 2029}
+\subtext{E\"otv\"os Lor\'and University (ELTE) \hfill Budapest, Hungary}\vspace*{1em}
+
+\subsection{M.Sc. in Artificial Intelligence \texorpdfstring{\hfill}{ } Sep. 2023 -- Jun. 2025}
+\subtext{University of Khenchela \hfill Khenchela, Algeria}\vspace*{1em}
+
+\subsection{B.Sc. in Mathematics and Computer Science \texorpdfstring{\hfill}{ } Sep. 2020 -- Jun. 2023}
+\subtext{University of Khenchela \hfill Khenchela, Algeria}\vspace*{1em}
+
+
+\section{Languages}
+Arabic (Native) \ $\vert$ \ English (Professional Proficiency) \ $\vert$ \ French (Intermediate) \ $\vert$ \ Hungarian (Beginner)
+
+\end{document}
