@@ -32,5 +32,5 @@ function updateClock () {
     
 window.onload = function() {
     updateClock(); 
-    setInterval('updateClock()', 1000 );
+    setInterval(updateClock, 1000);
 }

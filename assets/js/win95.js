@@ -197,13 +197,13 @@ function makeWindow(icon, title, frameurl, taskbar, res, wid, hei) { /* IT WORKS
     var sec6 = '</div><div class="win_titb_controls" id="win_windc_'
     // determine Window control type
     if(res != false && taskbar != false) { // all buttons
-        var sec7 = '"><img src="{{site.url}}/assets/img/min.png" class="win_titb_min" id"_"><img src="{{site.url}}/assets/img/max.png" class="win_titb_max" id"_"><img src="{{site.url}}/assets/img/close.png" class="win_titb_close" id"_"></div></div></div>';
+        var sec7 = '"><img src="{{site.url}}/assets/img/min.png" class="win_titb_min"><img src="{{site.url}}/assets/img/max.png" class="win_titb_max"><img src="{{site.url}}/assets/img/close.png" class="win_titb_close"></div></div></div>';
     } else if(res == false && taskbar == false) { // only close
-        var sec7 = '"><img src="{{site.url}}/assets/img/close.png" class="win_titb_close" id"_"></div></div></div>';
+        var sec7 = '"><img src="{{site.url}}/assets/img/close.png" class="win_titb_close"></div></div></div>';
     } else if (res == false) { // max. shaded out
-        var sec7 = '"><img src="{{site.url}}/assets/img/min.png" class="win_titb_min" id"_"><img src="{{site.url}}/assets/img/max_disabled.png" class="win_titb_max_dis" id"_"><img src="{{site.url}}/assets/img/close.png" class="win_titb_close" id"_"></div></div></div>';
+        var sec7 = '"><img src="{{site.url}}/assets/img/min.png" class="win_titb_min"><img src="{{site.url}}/assets/img/max_disabled.png" class="win_titb_max_dis"><img src="{{site.url}}/assets/img/close.png" class="win_titb_close"></div></div></div>';
     } else if (taskbar == false) { // no minimize button
-        var sec7 = '"><img src="{{site.url}}/assets/img/max.png" class="win_titb_max" id"_"><img src="{{site.url}}/assets/img/close.png" class="win_titb_close" id"_"></div></div></div>';
+        var sec7 = '"><img src="{{site.url}}/assets/img/max.png" class="win_titb_max"><img src="{{site.url}}/assets/img/close.png" class="win_titb_close"></div></div></div>';
     }
     //var sec8 = '<iframe class="win_window_iframe" src="' + frameurl + '" id="win_window_' + window_set + '_iframe"></div>';
     // merge strings into one variable for insertion into DOM
