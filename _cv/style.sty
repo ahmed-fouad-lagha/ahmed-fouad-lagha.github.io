@@ -20,8 +20,8 @@
 \definecolor{highlight}{RGB}{61, 90, 128} % CHANGE THIS TO YOUR FAV COLOR https://g.co/kgs/aoqdi7
 
 % LINKS
-\RequirePackage{hyperref}
-\hypersetup{colorlinks=true,urlcolor=highlight}
+\RequirePackage[draft]{hyperref}
+\newcommand{\printurl}[1]{{\color{highlight}#1}}
 
 % BULLET POINTS
 \RequirePackage[inline]{enumitem}
