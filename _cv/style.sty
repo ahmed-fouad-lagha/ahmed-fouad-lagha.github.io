@@ -11,7 +11,7 @@
 \RequirePackage{fontawesome5}
 
 % MARGINS AND SPACING
-\RequirePackage[margin=.5in, top=.5in, bottom=.5in]{geometry} % Set Margins
+\RequirePackage[margin=.5in, top=.26in, bottom=.5in]{geometry} % Set Margins
 \raggedright % left align no indent
 \raggedbottom % top align no indent
 
@@ -20,8 +20,8 @@
 \definecolor{highlight}{RGB}{61, 90, 128} % CHANGE THIS TO YOUR FAV COLOR https://g.co/kgs/aoqdi7
 
 % LINKS
-\RequirePackage[draft]{hyperref}
-\newcommand{\printurl}[1]{{\color{highlight}#1}}
+\RequirePackage[hidelinks]{hyperref}
+\newcommand{\printurl}[1]{{\color{highlight}\href{https://#1}{#1}}}
 
 % BULLET POINTS
 \RequirePackage[inline]{enumitem}

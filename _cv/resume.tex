@@ -27,7 +27,7 @@
 	\lhead{
 		\phone \\ % PHONE    
 		\city \\ % CITY
-		\email % EMAIL
+		\href{mailto:\email}{\email} % EMAIL
 	}
 	\chead{
 		\centering
@@ -36,9 +36,9 @@
 		{\color{highlight} \Large{\role}}
 	}
 	\rhead{
-		\portfolioname \\ % Portfolio
-		github.com/\github \\% Github
-		linkedin.com/in/\LinkedIn % LinkedIn
+		\href{\portfoliourl}{\portfolioname} \\ % Portfolio
+		\href{https://github.com/\github}{github.com/\github} \\% Github
+		\href{https://www.linkedin.com/in/\LinkedIn}{linkedin.com/in/\LinkedIn} % LinkedIn
 	}
 	\renewcommand{\headrulewidth}{0pt} % 0pt header rule
 	\setlength{\headheight}{75pt}
@@ -71,7 +71,7 @@ AI Engineer with hands-on experience developing and operationalizing end-to-end 
 \subtext{E\"otv\"os Lor\'and University (ELTE) \hfill Budapest, Hungary}
 \begin{zitemize}
     \item Build and optimize DP-SGD federated learning pipelines for privacy-preserving synthetic data generation ($\varepsilon=1$), engineering data preparation and feature workflows to benchmark privacy-utility trade-offs
-    \item Author and teach the open-source IDaSec Practicum (8 labs) \printurl{elte-dsed.github.io/Intro-Data-Security}, documenting AI architectures and best practices in responsible AI
+    \item Author and teach the open-source \href{https://elte-dsed.github.io/Intro-Data-Security}{IDaSec Practicum} (8 labs), documenting AI architectures and best practices in responsible AI
     \item Collaborate with cross-functional teams and mentor graduate students in AI engineering and MLOps workflows
 \end{zitemize}
 
@@ -83,20 +83,31 @@ AI Engineer with hands-on experience developing and operationalizing end-to-end 
     \item Collaborated with analytics and cross-functional teams to model subscriber metrics and optimize customer retention strategies
 \end{zitemize}
 
+\vspace{-0.45em}
+
 \section{Projects}
-\subsection{MyVellum \ \faGlobe \ \printurl{myvellum.me} \texorpdfstring{\hfill}{ } Dec. 2025 -- Present}
+\subsection{CASPER \ \href{https://ahmed-fouad-lagha.github.io/CASPER/}{\faGithub} \texorpdfstring{\hfill}{ } 2026}
+\subtext{Python, Differential Privacy, RAG, T5, MedCPT, Docker}
+\begin{zitemize}
+    \item Built a privacy-preserving RAG framework that clusters sensitive medical records with DP-KMeans and inverts noisy centroids into synthetic prototypes, enabling LLMs to retrieve on private data without accessing raw records
+    \item Achieved technical Recall@10 of 0.91 at $\varepsilon\approx44.28$, $\delta=10^{-5}$, with 50\% MIA AUC (random-guessing), demonstrating formal and empirical privacy guarantees
+\end{zitemize}
+
+\subsection{MyVellum \ \href{https://myvellum.me}{\faGlobe} \texorpdfstring{\hfill}{ } Dec. 2025 -- Present}
 \subtext{FastAPI, Groq API, LLM Orchestration, RAG, Docker, CI/CD}
 \begin{zitemize}
     \item Architected an LLM-powered app with modular prompt engineering, vector-backed RAG pipelines, and retrieval optimization
     \item Built automated evaluation gates into CI/CD for relevance and quality metrics; integrated Groq API and FastAPI with Docker
 \end{zitemize}
 
-\subsection{IoT-Access-Sentinel \ \faGithub \ \href{https://github.com/ahmed-fouad-lagha/IoT-Access-Sentinel}{ahmed-fouad-lagha/IoT-Access-Sentinel} \ \textnormal{(ITAT'2026, WAS)} \texorpdfstring{\hfill}{ } 2026}
-\subtext{FastAPI, Python, Multi-Agent LLMs, Docker, Wazuh, Prometheus}
+\subsection{Context-Aware Access Control for IoT Device \ \href{https://github.com/ahmed-fouad-lagha/IoT-Access-Sentinel}{\faGithub} \texorpdfstring{\hfill}{ } 2026}
+\subtext{FastAPI, Python, Multi-Agent LLMs, Docker, Wazuh, Prometheus \hfill ITAT'2026, WAS}
 \begin{zitemize}
     \item Built a hybrid zero-trust IoT authorization framework combining a deterministic validation pre-filter ($<1$\,ms fast path) with multi-agent LLM reasoning (~97\,ms slow path) for autonomous context-aware access control
     \item Achieved 94.1\% decision accuracy vs.\ 82.4\% for the RBAC baseline and blocked 100\% of 105 red-team adversarial attacks, with fail-secure DENY defaults on LLM rate limits or timeouts
 \end{zitemize}
+
+\vspace{-0.45em}
 
 \section{Education}
 \subsection{PhD in Informatics \textnormal{(GPA: 5/5)} \texorpdfstring{\hfill}{ } Sep. 2025 -- Expected 2029}
@@ -109,8 +120,9 @@ AI Engineer with hands-on experience developing and operationalizing end-to-end 
 
 \subsection{B.Sc. in Mathematics and Computer Science -- Ranked 1st in Class \textnormal{(GPA: 3.9/4.0)} \texorpdfstring{\hfill}{ } Sep. 2020 -- Jun. 2023}
 \edusubtext{University of Khenchela \hfill Khenchela, Algeria}
-\subtext{Final Year Project: EVA, a learning management system for Algerian students (Next.js \& TypeScript) \ \faGlobe \ \printurl{eva-web-snowy.vercel.app}}
+\subtext{Final Year Project: A learning management system for Algerian students. \ \href{https://eva-web-snowy.vercel.app}{\faGlobe}}
 
+\vspace{0.3em}
 
 \section{Awards \& Certifications}
 \begin{zitemize}
