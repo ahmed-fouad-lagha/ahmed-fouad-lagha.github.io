@@ -51,7 +51,7 @@
 \begin{minipage}[t]{0.48\textwidth}
 \section{Summary}
 \raggedright
-AI Engineer with hands-on experience developing and operationalizing end-to-end AI solutions across classical ML, deep learning, and generative AI, covering everything from data preparation to production deployment of RAG pipelines, LLM-powered applications, and model inference systems.
+AI Engineer and PhD researcher building production-oriented ML and generative AI systems with Python, PyTorch, RAG, FastAPI and Docker. Experience spanning privacy-preserving ML, LLM applications, model evaluation, and end-to-end AI pipelines.
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.48\textwidth}
@@ -70,8 +70,8 @@ AI Engineer with hands-on experience developing and operationalizing end-to-end 
 \subtext{E\"otv\"os Lor\'and University (ELTE) \hfill Budapest, Hungary}
 \begin{zitemize}
     \item Build and optimize DP-SGD federated learning pipelines for privacy-preserving synthetic data generation ($\varepsilon=1$), engineering data preparation and feature workflows to benchmark privacy-utility trade-offs
-    \item Author and teach the open-source \href{https://elte-dsed.github.io/Intro-Data-Security}{IDaSec Practicum} (8 labs), documenting AI architectures and best practices in responsible AI
-    \item Collaborate with cross-functional teams and mentor graduate students in AI engineering and MLOps workflows
+    \item Author and maintain the open-source \href{https://elte-dsed.github.io/Intro-Data-Security}{IDaSec Practicum} (13 labs across 8 modules on attacking, defending, and auditing ML models), with a GitHub Actions pipeline that auto-builds and deploys the documentation site on every merge to main
+    \item Teach the practicum and mentor graduate students in AI engineering and MLOps workflows
 \end{zitemize}
 
 \subsection{Data Analyst \texorpdfstring{\hfill}{ } Dec. 2024 -- Mar. 2025}
@@ -89,10 +89,10 @@ AI Engineer with hands-on experience developing and operationalizing end-to-end 
 \subtext{Python, Differential Privacy, RAG, T5, MedCPT, Docker}
 \begin{zitemize}
     \item Built a privacy-preserving RAG framework that clusters sensitive medical records with DP-KMeans and inverts noisy centroids into synthetic prototypes, enabling LLMs to retrieve on private data without accessing raw records
-    \item Achieved technical Recall@10 of 0.91 at $\varepsilon\approx44.28$, $\delta=10^{-5}$, with 50\% MIA AUC (random-guessing), demonstrating formal and empirical privacy guarantees
+    \item Evaluated the privacy-utility trade-off at $\varepsilon\approx44.28$, $\delta=10^{-5}$, achieving Recall@10~=~0.91 and MIA AUC~$\approx$~0.50 (random-guessing)
 \end{zitemize}
 
-\subsection{Context-Aware Access Control for IoT Device \ \href{https://github.com/ahmed-fouad-lagha/IoT-Access-Sentinel}{\faGithub} \texorpdfstring{\hfill}{ } 2026}
+\subsection{Context-Aware Access Control for IoT Devices \ \href{https://github.com/ahmed-fouad-lagha/IoT-Access-Sentinel}{\faGithub} \texorpdfstring{\hfill}{ } 2026}
 \subtext{FastAPI, Python, Multi-Agent LLMs, Docker, Wazuh, Prometheus \hfill ITAT'2026, WAS}
 \begin{zitemize}
     \item Built a hybrid zero-trust IoT authorization framework combining a deterministic validation pre-filter ($<1$\,ms fast path) with multi-agent LLM reasoning (~97\,ms slow path) for autonomous context-aware access control
@@ -102,8 +102,8 @@ AI Engineer with hands-on experience developing and operationalizing end-to-end 
 \subsection{MyVellum \ \href{https://myvellum.me}{\faGlobe} \texorpdfstring{\hfill}{ } Dec. 2025 -- Present}
 \subtext{FastAPI, Groq API, LLM Orchestration, RAG, Docker, CI/CD}
 \begin{zitemize}
-    \item Architected an LLM-powered app with modular prompt engineering, vector-backed RAG pipelines, and retrieval optimization
-    \item Built automated evaluation gates into CI/CD for relevance and quality metrics; integrated Groq API and FastAPI with Docker
+    \item Built and containerized a FastAPI RAG service with automated retrieval-quality evaluation gates in CI/CD, preventing deployments when evaluation metrics fall below defined thresholds
+    \item Engineered modular prompt design and vector-backed retrieval optimization over Groq-hosted LLMs
 \end{zitemize}
 
 \vspace{-0.45em}
@@ -123,12 +123,12 @@ AI Engineer with hands-on experience developing and operationalizing end-to-end 
 
 \vspace{0.45em}
 
-\section{Awards \& Certifications}
+\section{Awards, Publications \& Certifications}
 \begin{zitemize}
+    \item \textbf{Publication:} ``Context-Aware Access Control for IoT Devices Using Two-Role LLM Reasoning: A Security Evaluation'' --- ITAT 2026 (Workshop on Applied Security), accepted, to appear \hfill 2026
     \item \textbf{Stipendium Hungaricum Scholarship:} Fully funded PhD studies at ELTE \hfill Sep. 2025
     \item \textbf{2nd Place --- Starthon'25 Hackathon:} University of El Oued, Algeria \hfill Apr. 2025
     \item \textbf{Software Engineering (Back-end Specialization):} ALX Africa (\printurl{savanna.alxafrica.com/certificates/yNTLX6BYHR}) \hfill Feb. 2025
-    \item \textbf{AI Career Essentials (AiCE):} ALX Africa (\printurl{savanna.alxafrica.com/certificates/YEM9LC5BNm}) \hfill Jul. 2024
 \end{zitemize}
 
 \end{document}
