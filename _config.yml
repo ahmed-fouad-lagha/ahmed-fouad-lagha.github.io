@@ -1,4 +1,4 @@
-url: https://ahmed-fouad-lagha.github.io
+url: ""
 
 incremental: true
 
@@ -62,4 +62,4 @@ defaults:
         scope:
             path: ""
         values:
-            icon: "https://ahmed-fouad-lagha.github.io/assets/img/file.ico"
+            icon: "/assets/img/file.ico"
