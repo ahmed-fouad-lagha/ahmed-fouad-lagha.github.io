@@ -7,15 +7,17 @@ permalink: /bio/index.html
 <style type="text/css">
 .bio_top {
     width: 100%;
+    display: flex;
+    align-items: flex-start;
 }
 .bio_image {
     width: 200px;
-    float: left;
+    flex: 0 0 200px;
 }
 .bio_name {
-    width: calc(100% - 200px);
-    min-width: 200px;
-    float: left;
+    width: auto;
+    min-width: 0;
+    flex: 1;
     text-align:center;
 }
 .bio_statement {
@@ -23,7 +25,19 @@ permalink: /bio/index.html
     padding-top: 20px;
     width: 100%;
     font-size: 120%;
-    font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+@media (max-width: 500px) {
+    .bio_top {
+        display: block;
+    }
+    .bio_image {
+        display: block;
+        margin: 0 auto;
+    }
+    .bio_name {
+        width: 100%;
+    }
 }
 </style>
 
@@ -32,8 +46,8 @@ permalink: /bio/index.html
     <div class="bio_name">
         <h1>Ahmed Fouad Lagha</h1>
         <h3>PhD Candidate</h3>
-        <h3><a href="https://www.inf.elte.hu/en/" target="_blank">Faculty of Informatics</a><br />
-        <a href="https://www.elte.hu/en/" target="_blank">Eötvös Loránd University (ELTE)</a></h3><br />
+        <h3><a href="https://www.inf.elte.hu/en/" target="_blank" rel="noopener noreferrer">Faculty of Informatics</a><br />
+        <a href="https://www.elte.hu/en/" target="_blank" rel="noopener noreferrer">Eötvös Loránd University (ELTE)</a></h3><br />
         Pázmány Péter sétány 1/C,<br />
         Budapest, 1117 Hungary<br /><br />
         ahmed.lagha at inf dot elte dot hu <br />
@@ -41,7 +55,7 @@ permalink: /bio/index.html
 </div>
 <div class="bio_statement">
     <p>
-        I am a PhD Candidate at <a href="https://www.elte.hu/en/" target="_blank">Eötvös Loránd University (ELTE)</a> specializing in <strong>Synthetic Data Generation</strong> and <strong>Privacy Preservation</strong>. My research interests lie at the intersection of Machine Learning, Privacy, and Security, with a particular focus on Differential Privacy and Generative Models.<br/><br/>
+        I am a PhD Candidate at <a href="https://www.elte.hu/en/" target="_blank" rel="noopener noreferrer">Eötvös Loránd University (ELTE)</a> specializing in <strong>Synthetic Data Generation</strong> and <strong>Privacy Preservation</strong>. My research interests lie at the intersection of Machine Learning, Privacy, and Security, with a particular focus on Differential Privacy and Generative Models.<br/><br/>
 
         I am passionate about building secure and private machine learning systems that can benefit society while protecting individual privacy.
     </p>

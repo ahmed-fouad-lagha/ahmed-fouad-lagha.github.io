@@ -265,19 +265,19 @@ function addTaskbar(win_id, icon, title) {
     // icon detection
     if(icon != false) {
         // icon present
-        var sec1 = '<div class="win_tb_button" id="win_tb_win_';
+        var sec1 = '<button type="button" class="win_tb_button" id="win_tb_win_';
         var sec2 = '"><div class="win_tb_icon"><img src="';
         var sec3 = '" onerror="this.src = defaultImage"></div><div class="win_tb_text">';
-        var sec4 = '</div></div>';
+        var sec4 = '</div></button>';
         // merge stings into one variable for insertion into DOM
         var insertHTML = sec1 + win_id + sec2 + icon + sec3 + title + sec4;
     } else {
         // icon not present
         var placeholder = "{{site.url}}/assets/img/placeholder.png";
-        var sec1 = '<div class="win_tb_button" id="win_tb_win_';
+        var sec1 = '<button type="button" class="win_tb_button" id="win_tb_win_';
         var sec2 = '"><div class="win_tb_icon_noicon"><img src="';
         var sec3 = '"></div><div class="win_tb_text_noicon">';
-        var sec4 = '</div></div>';
+        var sec4 = '</div></button>';
         // merge stings into one variable for insertion into DOM
         var insertHTML = sec1 + win_id + sec2 + placeholder + sec3 + title + sec4;
     }    
@@ -333,13 +333,20 @@ function windowClose(num) {
     // taskbar id format = #win_tb_win_<id>
     var taskbarID = "#win_tb_win_" + num;
     $( taskbarID ).detach();
-    // switch focus to next window in taskbar OR prev. if the  
-    // closed window was the last window on the taskbar
-    var newWin = num++;
-    if(newWin > window_set){
-        var newWin = 1;
+    // Switch focus to the next surviving window, or clear focus when none remain.
+    var remainingWindows = $( '.win_window' );
+    if(remainingWindows.length === 0) {
+        deactivateAll();
+        return;
     }
-    switchTo(newWin);
+    var closedWindowNumber = parseInt(num, 10);
+    var newWin = remainingWindows.filter(function() {
+        return parseInt(this.id.split('_')[1], 10) > closedWindowNumber;
+    }).first();
+    if(newWin.length === 0) {
+        newWin = remainingWindows.last();
+    }
+    switchTo(newWin.attr('id').split('_')[1]);
 }
 // WINDOW MAXIMIZE FUNCTION
 function windowMax(num) {
@@ -360,8 +367,17 @@ function windowMin(num) {
     if(debug == true) {
         console.log("WinMinID: " + winMinID);
     }
-    switchTo(2);
     $( winMinID ).toggleClass( "win_window_minimized" );
+    if($( winMinID ).hasClass("win_window_minimized")) {
+        var nextWindow = $( '.win_window' ).not(winMinID).not('.win_window_minimized').last();
+        if(nextWindow.length > 0) {
+            switchTo(nextWindow.attr('id').split('_')[1]);
+        } else {
+            deactivateAll();
+        }
+    } else {
+        switchTo(num);
+    }
 }
 
 // deactivate all windows (for Start button and taskbar-less dialogs)
