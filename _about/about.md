@@ -23,4 +23,4 @@ My work primarily revolves around:
 My goal is to bridge the gap between advanced machine learning capabilities and the fundamental right to data privacy, enabling data-driven innovation that is both ethical and secure.
 
 ---
-You can find more details about my work in the [Biography](/bio/) and [Publications](/publications/) sections.
+You can find more details about my work in the [Biography]({{ '/bio/' | relative_url }}) and [Publications]({{ '/publications/' | relative_url }}) sections.
