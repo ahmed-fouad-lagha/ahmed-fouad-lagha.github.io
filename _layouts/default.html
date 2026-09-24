@@ -53,9 +53,9 @@
                 {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" | sort: "pos"%}
                 {% for collection in collections %}
                     {% if collection.label == current_collection %}
-                        <li class="hit"><a href="{{ '/' | append: collection.label | relative_url }}" title="{{collection.name}}"><img src="{{ '/assets/img/folder.ico' | relative_url }}" alt="" />{{ collection.name }}</a></li>
+                        <li class="hit"><a href="{{ '/' | append: collection.label | append: '/' | relative_url }}" title="{{collection.name}}"><img src="{{ '/assets/img/folder.ico' | relative_url }}" alt="" />{{ collection.name }}</a></li>
                     {% else %}
-                        <li><a href="{{ '/' | append: collection.label | relative_url }}" title="{{collection.name}}"><img src="{{ '/assets/img/folder.ico' | relative_url }}" alt="" />{{ collection.name }}</a></li>
+                        <li><a href="{{ '/' | append: collection.label | append: '/' | relative_url }}" title="{{collection.name}}"><img src="{{ '/assets/img/folder.ico' | relative_url }}" alt="" />{{ collection.name }}</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

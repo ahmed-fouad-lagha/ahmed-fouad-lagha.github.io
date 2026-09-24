@@ -52,9 +52,9 @@ collections:
         output: true
         name: Games
         pos: 6
-    about:
+    teaching:
         output: true
-        name: About
+        name: Teaching
         pos: 100
     
 defaults:
