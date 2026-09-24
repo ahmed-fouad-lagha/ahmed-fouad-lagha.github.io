@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Paper Summary: Deep Learning with Differential Privacy"
+title: "Deep Learning with Differential Privacy"
 show_date: "July 5, 2026"
 desc: "A concise breakdown of the foundational CCS 2016 paper that introduced DP-SGD."
 ---
 
-## Paper Summary: Deep Learning with Differential Privacy (Abadi et al., 2016)
+## Deep Learning with Differential Privacy (Abadi et al., 2016)
 
 This seminal paper, published at ACM CCS 2016, is the foundational work that made modern private deep learning practical. It bridged the gap between theoretical differential privacy (DP) and empirical machine learning.
 
