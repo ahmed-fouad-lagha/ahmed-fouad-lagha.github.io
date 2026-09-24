@@ -77,7 +77,8 @@
         </div>
         <div class="post_total">
             {% if current_collection %}
-                <div class="left">{{ site[current_collection] | size }} object(s)</div>
+                {% assign object_count = site[current_collection] | size | minus: 1 %}
+                <div class="left">{{ object_count }} object(s)</div>
             {% else %}
                 <div class="left">{{ site.collections | where_exp: "item", "item.label != 'posts'" | size }} object(s)</div>
             {% endif %}
