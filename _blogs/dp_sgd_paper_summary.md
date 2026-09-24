@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Deep Learning with Differential Privacy"
+permalink: /blogs/deep-learning-with-differential-privacy/
 show_date: "July 5, 2026"
 desc: "A concise breakdown of the foundational CCS 2016 paper that introduced DP-SGD."
 ---
