@@ -80,7 +80,7 @@ HistrixCalculator.display.add = function(s)
 		if(HistrixCalculator.stringDis.indexOf('-') <= 0 && HistrixCalculator.stringDis != '0')
 			{HistrixCalculator.stringDis = "-" + HistrixCalculator.stringDis;}
 		else
-			{HistrixCalculator.stringDis = HistrixCalculator.stringDis.subtring(1, HistrixCalculator.stringDis.length);}
+			{HistrixCalculator.stringDis = HistrixCalculator.stringDis.substring(1, HistrixCalculator.stringDis.length);}
 		}
 
 	if(s == '+/-' && HistrixCalculator.stringDis.indexOf('e') >= 0)

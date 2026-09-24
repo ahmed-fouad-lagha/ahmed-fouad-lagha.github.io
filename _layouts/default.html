@@ -85,7 +85,7 @@
     {% if page.title %}
         <div class="content">
             <div class="post_title">
-                <img src="{{ page.icon }}" alt="" />
+                <img src="{{ page.icon | relative_url }}" alt="" />
                 <h1>{{  page.title  }}</h1>
                 <a href="{{ '/' | relative_url }}"><div class="close_button"></div></a>
             </div>

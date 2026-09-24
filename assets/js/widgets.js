@@ -57,7 +57,7 @@ function makeWidget(icon, title, html, taskbar, min, ques, center, wid, hei, cus
         if(ques != true) { // No Question Mark
             var sec7 = '"><img src="{{ '/assets/img/close.png' | relative_url }}" class="win_titb_close" id"_"></div></div>';
         } else { // Question Mark Present
-            var sec7 = '"><img src="{{ '/assets/img/question.png' | relative_url }}" class="win_titb_question" id"_"><img src="{{ '/assets/img/close.png' | relative_url }}" class="win_titb_close" id"_"></div></div>';
+            var sec7 = '"><img src="{{ '/assets/img/help24.png' | relative_url }}" class="win_titb_question" id"_"><img src="{{ '/assets/img/close.png' | relative_url }}" class="win_titb_close" id"_"></div></div>';
         }
     }
     // merge strings into one variable for insertion into DOM
