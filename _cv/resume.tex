@@ -51,7 +51,7 @@
 \begin{minipage}[t]{0.48\textwidth}
 \section{Summary}
 \raggedright
-AI Engineer and PhD researcher building privacy-preserving ML systems and applied generative AI solutions with Python, PyTorch, FastAPI, Docker, and modern MLOps workflows. Experience spans synthetic data generation, differential privacy, LLM-based systems, and end-to-end pipelines from data preparation to evaluation and deployment.
+AI Engineer and PhD researcher building privacy-preserving ML and generative AI systems with Python, PyTorch, FastAPI, Docker, and MLOps. Focused on synthetic data, differential privacy, LLM applications, and production-ready evaluation pipelines.
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.48\textwidth}
@@ -65,13 +65,20 @@ AI Engineer and PhD researcher building privacy-preserving ML systems and applie
 
 \vspace{0.2em}
 
-\section{Experience}
-\subsection{AI Engineer \& Research Assistant \texorpdfstring{\hfill}{ } Sep. 2025 -- Present}
+\section{Professional Experience}
+\subsection{Research Assistant \texorpdfstring{\hfill}{ } Sep. 2025 -- Present}
 \subtext{E\"otv\"os Lor\'and University (ELTE) \hfill Budapest, Hungary}
 \begin{zitemize}
-    \item Build and optimize DP-SGD federated learning pipelines for privacy-preserving synthetic data generation ($\varepsilon=1$), engineering data preparation and feature workflows to benchmark privacy-utility trade-offs
-    \item Author and maintain the open-source \href{https://elte-dsed.github.io/Intro-Data-Security}{IDaSec Practicum} (13 labs across 8 modules on attacking, defending, and auditing ML models), with a GitHub Actions pipeline that auto-builds and deploys the documentation site on every merge to main
-    \item Teach the practicum and mentor graduate students in AI engineering and MLOps workflows
+	\item Build and optimize DP-SGD federated-learning pipelines for privacy-preserving synthetic data generation ($\varepsilon=1$), including data preparation, feature engineering, and privacy-utility evaluation
+	\item Author and maintain the open-source \href{https://elte-dsed.github.io/Intro-Data-Security}{IDaSec Practicum}: 13 hands-on labs across 8 modules covering ML attacks, defenses, privacy, and security auditing
+	\item Teach secure ML and mentor graduate students in AI engineering, reproducible experimentation, and MLOps workflows
+\end{zitemize}
+
+\subsection{AI Engineer \texorpdfstring{\hfill}{ } Dec. 2025 -- Present}
+\subtext{MyVellum \ \href{https://myvellum.me}{\faGlobe} \hfill Remote}
+\begin{zitemize}
+	\item Built and containerized a FastAPI RAG service with Groq-hosted LLMs, vector-backed retrieval, and modular prompt orchestration
+	\item Implemented CI/CD evaluation gates that block deployments when retrieval-quality metrics fall below defined thresholds
 \end{zitemize}
 
 \subsection{Data Analyst \texorpdfstring{\hfill}{ } Dec. 2024 -- Mar. 2025}
@@ -89,7 +96,7 @@ AI Engineer and PhD researcher building privacy-preserving ML systems and applie
 \subtext{Python, Differential Privacy, RAG, T5, MedCPT, Docker}
 \begin{zitemize}
     \item Built a privacy-preserving RAG framework that clusters sensitive medical records with DP-KMeans and inverts noisy centroids into synthetic prototypes, enabling LLMs to retrieve on private data without accessing raw records
-    \item Evaluated the privacy-utility trade-off at $\varepsilon\approx44.28$, $\delta=10^{-5}$, achieving Recall@10~=~0.91 and MIA AUC~$\approx$~0.50 (random-guessing)
+    \item Evaluated the privacy-utility trade-off, achieving Recall@10~=~0.91 and MIA AUC~$\approx$~0.50 (random-guessing)
 \end{zitemize}
 
 \subsection{Context-Aware Access Control for IoT Devices \ \href{https://github.com/ahmed-fouad-lagha/IoT-Access-Sentinel}{\faGithub} \texorpdfstring{\hfill}{ } 2026}
@@ -97,13 +104,6 @@ AI Engineer and PhD researcher building privacy-preserving ML systems and applie
 \begin{zitemize}
     \item Built a hybrid zero-trust IoT authorization framework combining a deterministic validation pre-filter ($<1$\,ms fast path) with multi-agent LLM reasoning (~97\,ms slow path) for autonomous context-aware access control
     \item Achieved 94.1\% decision accuracy vs.\ 82.4\% for the RBAC baseline and blocked 100\% of 105 red-team adversarial attacks, with fail-secure DENY defaults on LLM rate limits or timeouts
-\end{zitemize}
-
-\subsection{MyVellum \ \href{https://myvellum.me}{\faGlobe} \texorpdfstring{\hfill}{ } Dec. 2025 -- Present}
-\subtext{FastAPI, Groq API, LLM Orchestration, RAG, Docker, CI/CD}
-\begin{zitemize}
-    \item Built and containerized a FastAPI RAG service with automated retrieval-quality evaluation gates in CI/CD, preventing deployments when evaluation metrics fall below defined thresholds
-    \item Engineered modular prompt design and vector-backed retrieval optimization over Groq-hosted LLMs
 \end{zitemize}
 
 \vspace{-0.45em}
@@ -127,7 +127,7 @@ AI Engineer and PhD researcher building privacy-preserving ML systems and applie
 \begin{zitemize}
     \item \textbf{Stipendium Hungaricum Scholarship:} Fully funded PhD studies at ELTE \hfill Sep. 2025
     \item \textbf{2nd Place --- Starthon'25 Hackathon:} University of El Oued, Algeria \hfill Apr. 2025
-    \item \textbf{Software Engineering (Back-end Specialization):} ALX Africa (\printurl{savanna.alxafrica.com/certificates/yNTLX6BYHR}) \hfill Feb. 2025
+	\item \textbf{Software Engineering (Back-end Specialization):} ALX Africa \href{https://savanna.alxafrica.com/certificates/yNTLX6BYHR}{\faCertificate} \hfill Feb. 2025
 \end{zitemize}
 
 \end{document}
