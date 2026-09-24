@@ -51,9 +51,9 @@
                 {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" | sort: "pos"%}
                 {% for collection in collections %}
                     {% if collection.label == current_collection %}
-                        <li class="hit"><a href="{{ '/' | append: collection.label | append: '/#post' | relative_url }}" title="{{collection.name}}"><img src="{{ '/assets/img/folder.ico' | relative_url }}" alt="" />{{ collection.name }}</a></li>
+                        <li class="hit"><a href="{{ '/' | append: collection.label | relative_url }}" title="{{collection.name}}"><img src="{{ '/assets/img/folder.ico' | relative_url }}" alt="" />{{ collection.name }}</a></li>
                     {% else %}
-                        <li><a href="{{ '/' | append: collection.label | append: '/#post' | relative_url }}" title="{{collection.name}}"><img src="{{ '/assets/img/folder.ico' | relative_url }}" alt="" />{{ collection.name }}</a></li>
+                        <li><a href="{{ '/' | append: collection.label | relative_url }}" title="{{collection.name}}"><img src="{{ '/assets/img/folder.ico' | relative_url }}" alt="" />{{ collection.name }}</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -65,9 +65,9 @@
                 {% for post in site[current_collection] %}
                     {% if post.url != page.url %}
                         {% if post.id == page.id %}
-                            <li class="hit"><a href="{{ post.url | relative_url }}#post" title="{{ post.title }}"><img height="32px" src="{{ post.icon | relative_url }}" alt="" title="{{ post.title }}" />{{ post.title }}</a></li>
+                            <li class="hit"><a href="{{ post.url | relative_url }}" title="{{ post.title }}"><img height="32px" src="{{ post.icon | relative_url }}" alt="" title="{{ post.title }}" />{{ post.title }}</a></li>
                         {% else %}
-                            <li><a href="{{ post.url | relative_url }}#post" title="{{ post.title }}"><img height="32px" src="{{ post.icon | relative_url }}" alt="" title="{{ post.title }}" />{{ post.title }}</a></li>
+                            <li><a href="{{ post.url | relative_url }}" title="{{ post.title }}"><img height="32px" src="{{ post.icon | relative_url }}" alt="" title="{{ post.title }}" />{{ post.title }}</a></li>
                         {% endif %}
                     {% endif %}
                 {% endfor %}

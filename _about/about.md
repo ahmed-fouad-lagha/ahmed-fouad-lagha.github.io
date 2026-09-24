@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "About Ahmed Fouad Lagha"
-permalink: /about/index.html
+permalink: /about/
 ---
 
 # About Me

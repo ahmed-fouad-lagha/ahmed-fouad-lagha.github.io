@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Games"
-permalink: /games/index.html
+permalink: /games/
 ---
 ## Want to play?
 

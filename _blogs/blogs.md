@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Blogs"
-permalink: /blogs/index.html
+permalink: /blogs/
 class: "blog"
 ---
 ## Blogs
