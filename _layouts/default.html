@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+{% assign array = page.id | split: "/"%}
+{% assign current_collection = array[1] %}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +17,9 @@
         <title>{{ site.name }}</title>
         <link rel="stylesheet" type="text/css" href="{{ '/assets/css/001.css' | relative_url }}">
     {% endif %}
-    <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+    {% if current_collection == "blogs" %}
+        <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/win95.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/window.css' | relative_url }}">
@@ -33,8 +37,6 @@
     <script src="{{ '/assets/js/widgets.js' | relative_url }}"></script>
 </head>
 <body>
-    {% assign array = page.id | split: "/"%}
-    {% assign current_collection = array[1] %}
     {% if current_collection == "blogs" %}
         <script src="{{ '/assets/js/anchor_links.js' | relative_url }}"></script>
     {% endif %}
@@ -95,9 +97,11 @@
             <div class="post_content" id="post">
                 {% if page.class %}
                     <div class="{{ page.class }}">
+                {% elsif current_collection == "blogs" %}
+                    <div class="blog">
                 {% endif %}
                         {{ content }}
-                {% if page.class %}
+                {% if page.class or current_collection == "blogs" %}
                     </div>
                 {% endif %}
             </div>
