@@ -1,5 +1,5 @@
 /*
- * «Copyright 2011 José F. Maldonado»
+ * ï¿½Copyright 2011 Josï¿½ F. Maldonadoï¿½
  *
  *  This file is part of Histrix.
  *
@@ -93,7 +93,7 @@ HistrixCalculator.init = function()
 
 
 	// Buttons.
-	jQuery("#HistrixCalculator a.button").click(function()
+	jQuery("#HistrixCalculator a.button, #HistrixCalculator button.button").click(function()
 		{
 		if(typeof jQuery(this).attr('disabled') == 'undefined' || jQuery(this).attr('disabled') == false || jQuery(this).attr('disabled') == 'false')
                     { HistrixCalculator.action(jQuery(this).html()); }

@@ -65,7 +65,7 @@ $(function(){
             } else if(e.which == 3 && clicked.hasClass('hidden')) {  //右键点击操作2，如果允许使用问号标记，则可执行操作3
                 if(clicked.hasClass('flag')) {
                     clicked.removeClass('flag');
-                    if($('#check').attr('checked')) clicked.addClass('check');
+                    if($('#check').prop('checked')) clicked.addClass('check');
                     lastNum ++;
                     countNum ++;
                 } else if(clicked.hasClass('check')) {

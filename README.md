@@ -1,11 +1,13 @@
 # Ahmed Fouad Lagha's Homepage
 
-Run `bundle` to install dependencies.
+Run `bundle install` to install dependencies.
 
 Run `jekyll serve` to preview the website on http://localhost:4000.
 
 Run `jekyll build` to generate the website files under `_site` folder.
 
 Hosted on GitHub Pages.
+
+The site does not include analytics by default. Add a consent-aware GA4 integration only when a valid measurement ID and privacy policy are available.
 
 This website is powered by <a href="https://jekyllrb.com/" target="_blank">jekyll</a> (<a href="https://github.com/jekyll/jekyll/blob/master/LICENSE" target="_blank">MIT License</a>), and is developed based on two amazing Windows95 theme projects on github by <a href="https://github.com/rn10950/Windows95-HTML" target="_blank">rn10950</a> and <a href="https://github.com/h01000110/windows-95" target="_blank">h01000110</a> (<a href="https://github.com/h01000110/windows-95/blob/master/LICENSE" target="_blank">MIT License</a>).

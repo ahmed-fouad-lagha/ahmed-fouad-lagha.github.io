@@ -36,6 +36,7 @@ $( document ).ready(function(){
             $( ".win_titlebar" ).toggleClass( "win_titb_start" );
             $( ".win_tb_button" ).toggleClass( "win_tb_button_start" );
             $( "#win_start_button" ).toggleClass( "win_start_button_depressed" );
+            $( "#win_start_button" ).attr("aria-expanded", $( "#win_start" ).is(":visible") ? "true" : "false");
             // START MENU DESELECTION BY CLICKING OUTSIDE OF START MENU
             /*if($("#win_start_button").hasClass("win_start_button_depressed") == true) {
                 $(document).click(function(event) {

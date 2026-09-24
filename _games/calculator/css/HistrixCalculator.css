@@ -1,5 +1,5 @@
 /*
- * «Copyright 2013 Jose F. Maldonado»
+ * ï¿½Copyright 2013 Jose F. Maldonadoï¿½
  *
  * This file is part of Histrix.
  *
@@ -28,7 +28,10 @@ img.icon {
 #HistrixCalculator
 	{
 	width: 450px;
+	max-width: 100%;
 	margin: 0 auto;
+	box-sizing: border-box;
+	overflow-x: auto;
 	font-size: 9pt;
 	text-align: center;
 	font-family: helvetica;
@@ -39,6 +42,13 @@ img.icon {
     -webkit-box-shadow: 4px 4px 2px #888;
     -moz-box-shadow: 4px 4px 2px #888;
 	}
+
+@media (max-width: 520px) {
+	#HistrixCalculator {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
 
 #HistrixCalculator div.up
 	{ padding: 3px; }
@@ -144,7 +154,8 @@ img.icon {
 
 /* ----- Botones ----- */
 
-#HistrixCalculator a.button
+#HistrixCalculator a.button,
+#HistrixCalculator button.button
 	{
 	text-align: center;
 	text-decoration: none;
@@ -175,14 +186,16 @@ img.icon {
     background: -moz-linear-gradient(top,  #fff,  #e0e0e0);
 	}
 
-#HistrixCalculator a.button:hover
+#HistrixCalculator a.button:hover,
+#HistrixCalculator button.button:hover
 	{
 	background-color: #f0f0c0;
     background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f0f0c0));
     background: -moz-linear-gradient(top,  #fff,  #f0f0f0);
 	}
 
-#HistrixCalculator a.button:active
+#HistrixCalculator a.button:active,
+#HistrixCalculator button.button:active
 	{
 	background-color: #e0e0e0;
     background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#ffffff));
