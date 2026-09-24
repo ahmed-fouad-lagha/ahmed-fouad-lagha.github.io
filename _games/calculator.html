@@ -7,7 +7,6 @@ command: "calc"
 
 <link rel="stylesheet" href="calculator/css/HistrixCalculator.css" type="text/css"/>
 
-<!--<script type="text/javascript" src="calculator/js/jquery-1.4.2.min.js"></script>-->
 <script type="text/javascript" src="calculator/js/HistrixCalculator.js"></script>
 <script type="text/javascript" src="calculator/js/HistrixCalculator.handlers.js"></script>
 <script type="text/javascript" src="calculator/js/HistrixCalculator.math.js"></script>
@@ -23,7 +22,8 @@ command: "calc"
             </div>
             Histrix
             <div class="mode">
-                <select name="mode">
+                <label for="calc-mode" class="sr-only">Calculator mode</label>
+                <select id="calc-mode" name="mode">
                     <option value="standard">Standard</option>
                     <option value="scientific">Scientific</option>
                 </select>
@@ -32,29 +32,30 @@ command: "calc"
 
         <!-- Display -->
         <div class="up">
-            <input type="text" name="display" value="" readonly="readonly" class="display"/>
+            <label for="calc-display" class="sr-only">Calculator display</label>
+            <input id="calc-display" type="text" name="display" value="" readonly="readonly" class="display"/>
         </div>
 
         <!-- Bases -->
         <div class="up scientific">
             <div class="left_side">
-                <input type="radio" name="base" value="hexadecimal"/><span class="label">Hex &nbsp;</span>
-                <input type="radio" name="base" value="decimal" checked="checked"/><span class="label">Dec &nbsp;</span>
-                <input type="radio" name="base" value="octal"/><span class="label">Oct &nbsp;</span>
-                <input type="radio" name="base" value="binary"/><span class="label">Bin</span>
+                <label><input id="base-hex" type="radio" name="base" value="hexadecimal"/><span class="label">Hex &nbsp;</span></label>
+                <label><input id="base-dec" type="radio" name="base" value="decimal" checked="checked"/><span class="label">Dec &nbsp;</span></label>
+                <label><input id="base-oct" type="radio" name="base" value="octal"/><span class="label">Oct &nbsp;</span></label>
+                <label><input id="base-bin" type="radio" name="base" value="binary"/><span class="label">Bin</span></label>
             </div>
 
             <div class="right_side">
                 <span class="decimal">
-                    <input type="radio" name="metric" value="degrees"/><span class="label">Degrees &nbsp;</span>
-                    <input type="radio" name="metric" value="radians" checked="checked"/><span class="label">Radians &nbsp;</span>
-                    <input type="radio" name="metric" value="grads"/><span class="label">Grads</span>
+                    <label><input id="metric-deg" type="radio" name="metric" value="degrees"/><span class="label">Degrees &nbsp;</span></label>
+                    <label><input id="metric-rad" type="radio" name="metric" value="radians" checked="checked"/><span class="label">Radians &nbsp;</span></label>
+                    <label><input id="metric-grad" type="radio" name="metric" value="grads"/><span class="label">Grads</span></label>
                 </span>
                 <span class="hexadecimal octal binary">
-                    <input type="radio" name="range" value="qword" checked="checked"/><span class="label">Qword &nbsp;</span>
-                    <input type="radio" name="range" value="dword"/><span class="label">Dword &nbsp;</span>
-                    <input type="radio" name="range" value="word"/><span class="label">Word &nbsp;</span>
-                    <input type="radio" name="range" value="byte"/><span class="label">Byte</span>
+                    <label><input id="range-qword" type="radio" name="range" value="qword" checked="checked"/><span class="label">Qword &nbsp;</span></label>
+                    <label><input id="range-dword" type="radio" name="range" value="dword"/><span class="label">Dword &nbsp;</span></label>
+                    <label><input id="range-word" type="radio" name="range" value="word"/><span class="label">Word &nbsp;</span></label>
+                    <label><input id="range-byte" type="radio" name="range" value="byte"/><span class="label">Byte</span></label>
                 </span>
             </div>
         </div>
@@ -63,7 +64,8 @@ command: "calc"
             <!-- Right-side buttons -->
             <div class="right">
                 <div class="left_column">
-                    <span class="square read_only"><input type="text" name="mem" readonly="readonly"/></span>
+                    <label for="calc-mem" class="sr-only">Memory register</label>
+                    <span class="square read_only"><input id="calc-mem" type="text" name="mem" readonly="readonly"/></span>
                     <a class="button square red" href="">MC</a>
                     <a class="button square red" href="">MR</a>
                     <a class="button square red" href="">MS</a>
@@ -122,12 +124,13 @@ command: "calc"
 
                 <div class="row">
                     <div class="inv_hyp_column">
-                        <input type="checkbox" name="inv" value="inv"/> <span class="label">Inv</span>
+                        <label for="calc-inv"><input id="calc-inv" type="checkbox" name="inv" value="inv"/> <span class="label">Inv</span></label>
                         &nbsp;&nbsp;
-                        <input type="checkbox" name="hyp" value="hyp"/> <span class="label">Hyp</span>
+                        <label for="calc-hyp"><input id="calc-hyp" type="checkbox" name="hyp" value="hyp"/> <span class="label">Hyp</span></label>
                     </div>
 
-                    <span class="square read_only"><input type="text" name="par" readonly="readonly"/></span>
+                    <label for="calc-par" class="sr-only">Parameter display</label>
+                    <span class="square read_only"><input id="calc-par" type="text" name="par" readonly="readonly"/></span>
 
                     <div style="clear:both"></div>
                 </div>
@@ -169,7 +172,8 @@ command: "calc"
 
         <div id="HistrixCalculator_stadistics">
             <div>
-                <select name="datos" multiple="multiple" size="4" style="width:100%;">
+                <label for="calc-datos" class="sr-only">Calculator stored values</label>
+                <select id="calc-datos" name="datos" multiple="multiple" size="4" style="width:100%;">
 
                 </select>
             </div>
