@@ -54,7 +54,7 @@
                 {% if page.class %}
                     <div class="{{ page.class }}">
                 {% elsif current_collection == "blogs" %}
-                    <div class="blog">
+                    <div class="blog blog_post">
                 {% endif %}
                         {{ content }}
                 {% if page.class or current_collection == "blogs" %}

@@ -10,8 +10,8 @@ sidebar_exclude: true
     {% for blog in site.blogs %}
     {% if blog.url != page.url %}
     <li class="blog_entry">
-        <span class="blog_date">{{ blog.show_date }}</span>
         <a class="blog_link" href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
+        <span class="blog_date">{{ blog.show_date }}</span>
         <p class="blog_desc">{{ blog.desc }}</p>
     </li>
     {% endif %}

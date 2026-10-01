@@ -59,11 +59,11 @@
     text-align: center;
 }
 
-/* Blog styles. The post body deliberately sets no typography of its own:
-   it inherits the site values from .post_content (13px body, 150% leading,
-   #0000ff links, 8px black blockquote rule, 3px hr, 1px #222 tables) so a
-   post reads as part of the Win95 window rather than a modern page inside
-   it. Only layout those shared rules cannot express belongs here. */
+/* Blog styles. Everything except the article text size comes from the
+   shared .post_content rules (13px body, 150% leading, #0000ff links, 8px
+   black blockquote rule, 3px hr, 1px #222 tables), so a post reads as part
+   of the Win95 window rather than a modern page inside it. The article
+   body and its heading ladder are the only typography overridden here. */
 
 /* The window title bar already shows the post title, so the first element
    in the body should sit tight under it. */
@@ -78,13 +78,50 @@
     height: auto;
 }
 
-/* Blog index: date above a linked title, description beneath. */
-.blog_list {
+/* Article body uses 120% (15.6px), the site's existing long-form size --
+   the same value as .bio_statement and the honor/publication list text.
+   That crowds the 13px-base heading ladder (h3 16px would sit 0.4px above
+   the body), so the blog headings shift up one rung using existing site
+   sizes: h2 20px (site h1), h3 18px (site h2), h4 16px (site h3), and
+   h5/h6 back at the body size. Scoped to .blog_post, which only the
+   article wrapper carries, so the index stays at the 13px list size. */
+.blog_post {
+    font-size: 120%;
+}
+
+.post_content .blog_post h2 {
+    font-size: 20px;
+}
+
+.post_content .blog_post h3 {
+    font-size: 18px;
+}
+
+.post_content .blog_post h4 {
+    font-size: 16px;
+}
+
+.post_content .blog_post h5,
+.post_content .blog_post h6 {
+    font-size: 100%;
+}
+
+/* Blog index: title on the left with the date right-aligned on the same
+   row, description beneath. Mirrors the right-aligned metadata Win95 list
+   views use, and the .honor_year float already used on /honors/. Scoped
+   under .blog because .post_content sets list-style on ul and margin on p
+   at a higher specificity than a bare class; without the extra class the
+   markers reappear and the description gains the 15px paragraph margin. */
+.blog .blog_list {
     list-style: none;
     padding-left: 0;
 }
 
 .blog_entry {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    column-gap: 1em;
     margin-bottom: 1.4em;
 }
 
@@ -93,17 +130,24 @@
 }
 
 .blog_date {
-    display: block;
-    font-size: 85%;
+    justify-self: end;
+    /* Body size; the 85% it used was the smallest text on the site. */
+    font-size: 100%;
     /* #888888 was about 3.5:1 on the #fff8ff panel; #555555 clears 4.5:1. */
     color: #555555;
 }
 
-.blog_link {
+.blog .blog_link {
+    justify-self: start;
     font-weight: bold;
+    /* .post_content a sets margin-bottom: 15px, which is invisible while
+       the link is inline. As a grid item it is blockified, so that margin
+       becomes real and pushes the description ~15px away from the title. */
+    margin-bottom: 0;
 }
 
-.blog_desc {
+.blog .blog_desc {
+    grid-column: 1 / -1;
     margin: 0.3em 0 0;
     line-height: 150%;
 }
@@ -167,5 +211,15 @@
 
     .bio_name {
         width: 100%;
+    }
+
+    /* A right-aligned date would collide with a wrapping title, so stack
+       the entry again on narrow screens. */
+    .blog_entry {
+        display: block;
+    }
+
+    .blog_date {
+        display: block;
     }
 }
