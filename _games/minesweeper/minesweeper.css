@@ -1,0 +1,69 @@
+.minesweeper {
+    width: min(100%, 620px);
+    margin: 0 auto;
+    color: #111;
+    font-family: "Microsoft Sans Serif", sans-serif;
+}
+
+.minesweeper_controls,
+.minesweeper_status {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.minesweeper button {
+    padding: 5px 9px;
+    background: #c0c0c0;
+    border: 2px outset #fff;
+    font: inherit;
+}
+
+.minesweeper button:active,
+.minesweeper button:focus-visible {
+    border-style: inset;
+}
+
+.minesweeper_status {
+    justify-content: space-between;
+    padding: 8px;
+    background: #c0c0c0;
+    border: 2px inset #fff;
+}
+
+.minesweeper_board {
+    display: grid;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    background: #808080;
+    border: 3px inset #fff;
+}
+
+.minesweeper_cell {
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    color: #000080;
+    background: #c0c0c0;
+    border: 2px outset #fff;
+    font-weight: bold;
+}
+
+.minesweeper_cell.revealed {
+    background: #d8d8d8;
+    border: 1px solid #888;
+}
+
+.minesweeper_cell.mine {
+    color: #fff;
+    background: #c00000;
+}
+
+.minesweeper_cell.flagged::after {
+    content: "⚑";
+    color: #c00000;
+}
