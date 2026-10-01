@@ -42,7 +42,11 @@
 
 .honor_title {
     font-weight: bold;
-    margin-right: 5%;
+}
+
+.honor_content {
+    /* Plain inline detail in parentheses after the title. */
+    color: #555555;
 }
 
 .honor_li {
@@ -84,6 +88,7 @@
     font-weight: bold;
     font-size: 120%;
     margin-top: 1em;
+    text-align: center;
 }
 
 .publication_award {
