@@ -1,0 +1,69 @@
+<!-- Taskbar -->
+<div id="win_taskbar">
+    <!-- Start Button -->
+    <button type="button" id="win_start_button" aria-expanded="false" aria-controls="win_start">
+        <img src="{{ '/assets/img/start.png' | relative_url }}" id="win_start_icon" alt="Windows Logo">
+        <span id="win_start_text">Start</span>
+    </button>
+    <!-- Taskbar Buttons -->
+    <div id="win_tb_placeholder">
+    </div><!-- This is here to provide a target for the taskbar addition function -->
+    <!-- System Tray -->
+    <div id="win_systray">
+        <span id="win_clock">&nbsp;</span>
+    </div>
+</div>
+<!-- Start Menu -->
+<div id="win_start">
+    <div id="win_start_banner">
+        <img src="{{ '/assets/img/start_banner.png' | relative_url }}" alt="Windows 95" id="win_start_banner_img">
+    </div>
+    <!-- Start Menu Top-level List -->
+    <div id="win_start_tli_cont">
+        <!-- Programs -->
+        <div id="win_start_tli_programs" class="win_start_toplevel_item">
+            <img src="{{ '/assets/img/programs24.png' | relative_url }}" alt="Programs" class="win_start_tliicon">
+            <span class="win_start_tlitext"><u>P</u>rograms</span>
+        </div>
+        <!-- Documents -->
+        <div id="win_start_tli_documents" class="win_start_toplevel_item">
+            <img src="{{ '/assets/img/documents24.png' | relative_url }}" alt="Documents" class="win_start_tliicon">
+            <span class="win_start_tlitext"><u>D</u>ocuments</span>
+        </div>
+        <!-- Settings -->
+        <div id="win_start_tli_settings" class="win_start_toplevel_item">
+            <img src="{{ '/assets/img/settings24.png' | relative_url }}" alt="Settings" class="win_start_tliicon">
+            <span class="win_start_tlitext"><u>S</u>ettings</span>
+        </div>
+        <!-- Find -->
+        <div id="win_start_tli_find" class="win_start_toplevel_item">
+            <img src="{{ '/assets/img/find24.png' | relative_url }}" alt="Find" class="win_start_tliicon">
+            <span class="win_start_tlitext"><u>F</u>ind</span>
+        </div>
+        <!-- Help -->
+        <div id="win_start_tli_help" class="win_start_toplevel_item">
+            <img src="{{ '/assets/img/help24.png' | relative_url }}" alt="Help" class="win_start_tliicon">
+            <span class="win_start_tlitext"><u>H</u>elp</span>
+        </div>
+        <!-- Run -->
+        <button type="button" id="win_start_tli_run" class="win_start_toplevel_item" onclick="run(true)">
+            <img src="{{ '/assets/img/run24.png' | relative_url }}" alt="Run..." class="win_start_tliicon">
+            <span class="win_start_tlitext"><u>R</u>un...</span>
+        </button>
+        <!-- Divider -->
+        <div class="win_start_divider">
+            <div class="win_start_d1"></div>
+            <div class="win_start_d2"></div>
+        </div>
+        <!-- Shut Down -->
+        <div id="win_start_tli_shutdown" class="win_start_toplevel_item">
+            <img src="{{ '/assets/img/shutdown24.png' | relative_url }}" alt="Shut Down..." class="win_start_tliicon">
+            <span class="win_start_tlitext">Sh<u>u</u>t Down...</span>
+        </div>
+    </div>
+</div>
+<div id="win_container">
+    <div id="win_placeholder"></div><!-- This is here to provide a target for the window creation function -->
+</div>
+<div id="win_overlay">
+</div>

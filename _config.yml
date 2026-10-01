@@ -1,18 +1,12 @@
 url: "https://ahmed-fouad-lagha.github.io"
 baseurl: ""
 
-incremental: true
-
 plugins:
-    -
-        jekyll-sitemap
+    - jekyll-sitemap
 
 # variables
 name: Ahmed Fouad Lagha's homepage
 description: Ahmed Fouad Lagha's homepage
-google_verification: null
-
-
 # File management
 include: [".htaccess"]
 exclude: ["README.md", "LICENSE", "TODO.txt", "Gemfile", "Gemfile.lock"]

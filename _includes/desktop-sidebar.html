@@ -1,0 +1,45 @@
+<aside class="wrapper" aria-label="Site navigation">
+    <div class="default_title">
+        <img src="{{ '/assets/img/mycomputer.png' | relative_url }}" alt="" />
+        <h1>{{ site.name }}</h1>
+    </div>
+    {% include topbar.html %}
+    <div class="tag_list">
+        <ul id="tag-list">
+            <li><a href="{{ '/' | relative_url }}" ><img src="{{ '/assets/img/disk.png' | relative_url }}" alt="" />(C:)</a>
+            <ul>
+                {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" | sort: "pos"%}
+                {% for collection in collections %}
+                    {% if collection.label == current_collection %}
+                        <li class="hit"><a href="{{ '/' | append: collection.label | append: '/' | relative_url }}" title="{{collection.name}}"><img src="{{ '/assets/img/folder.ico' | relative_url }}" alt="" />{{ collection.name }}</a></li>
+                    {% else %}
+                        <li><a href="{{ '/' | append: collection.label | append: '/' | relative_url }}" title="{{collection.name}}"><img src="{{ '/assets/img/folder.ico' | relative_url }}" alt="" />{{ collection.name }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="post_list">
+        <ul>
+            {% for post in site[current_collection] %}
+                {% if post.url != page.url %}
+                    {% if post.id == page.id %}
+                        <li class="hit"><a href="{{ post.url | relative_url }}" title="{{ post.title }}"><img height="32px" src="{{ post.icon | relative_url }}" alt="" title="{{ post.title }}" />{{ post.title }}</a></li>
+                    {% else %}
+                        <li><a href="{{ post.url | relative_url }}" title="{{ post.title }}"><img height="32px" src="{{ post.icon | relative_url }}" alt="" title="{{ post.title }}" />{{ post.title }}</a></li>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="post_total">
+        {% if current_collection %}
+            {% assign object_count = site[current_collection] | size | minus: 1 %}
+            <div class="left">{{ object_count }} object(s)</div>
+        {% else %}
+            <div class="left">{{ site.collections | where_exp: "item", "item.label != 'posts'" | size }} object(s)</div>
+        {% endif %}
+        <div class="right">&nbsp;</div>
+    </div>
+</aside>

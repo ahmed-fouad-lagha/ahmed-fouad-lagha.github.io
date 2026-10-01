@@ -1,10 +1,10 @@
 # Ahmed Fouad Lagha's Homepage
 
-Run `bundle install` to install dependencies.
+Install Ruby, then run `bundle install` to install the locked dependencies.
 
-Run `jekyll serve` to preview the website on http://localhost:4000.
+Run `bundle exec jekyll serve` to preview the website on http://localhost:4000.
 
-Run `jekyll build` to generate the website files under `_site` folder.
+Run `bundle exec jekyll build` to generate the website files under the `_site` folder.
 
 Hosted on GitHub Pages.
 
