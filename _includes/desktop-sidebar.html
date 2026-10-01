@@ -19,7 +19,7 @@
             </li>
         </ul>
     </div>
-    {% if current_collection == "blogs" or current_collection == "games" %}
+    {% if (current_collection == "blogs" or current_collection == "games") and page.url != '/blogs/' and page.url != '/games/' %}
         <div class="post_list">
             <ul>
                 {% for post in site[current_collection] %}
@@ -35,7 +35,7 @@
         </div>
     {% endif %}
     <div class="post_total">
-        {% if current_collection %}
+        {% if current_collection == "blogs" or current_collection == "games" or current_collection == "cv" %}
             {% assign object_count = site[current_collection] | size | minus: 1 %}
             <div class="left">{{ object_count }} object(s)</div>
             {% else %}

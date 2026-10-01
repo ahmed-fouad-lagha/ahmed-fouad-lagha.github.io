@@ -22,9 +22,9 @@ body {
     border-color: #fff8ff #000000 #000000 #fff8ff;
     padding: 2px 0;
     float: left;
-    height: calc(100% - 100px);
+    height: auto;
     width: 300px;
-    min-height: 200px;
+    min-height: 0;
 }
 
 .content {
@@ -153,10 +153,10 @@ ul.topbar {
 .post_list {
     width: 98.7%;
     margin: 0 auto;
-    min-height: calc(60% - 66px);
-    max-height: calc(60% - 66px);
-    overflow-y: scroll;
-    display: inline-block;
+    min-height: 0;
+    max-height: 40%;
+    overflow-y: auto;
+    display: block;
 
     ul {
         list-style: none;
@@ -186,10 +186,10 @@ ul.topbar {
 .tag_list {
     width: 98.7%;
     margin: 0 auto;
-    min-height: 40%;
+    min-height: 0;
     max-height: 40%;
-    overflow-y: scroll;
-    display: inline-block;
+    overflow-y: auto;
+    display: block;
 
     img {
         height: 16px;
