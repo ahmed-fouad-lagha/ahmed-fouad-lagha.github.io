@@ -2,6 +2,7 @@
 layout: default
 title: "Honors"
 permalink: /honors/
+desc: "Awards and honors received by Ahmed Fouad Lagha, including the Stipendium Hungaricum scholarship and valedictorian distinctions."
 ---
 
 <h2 class="honors_heading">Selected Honors/Awards</h2>

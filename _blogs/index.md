@@ -2,6 +2,7 @@
 layout: default
 title: "Blogs"
 permalink: /blogs/
+desc: "Writing by Ahmed Fouad Lagha on machine learning, differential privacy, and synthetic data."
 class: "blog"
 sidebar_exclude: true
 ---

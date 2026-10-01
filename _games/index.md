@@ -2,6 +2,7 @@
 layout: default
 title: "Games"
 permalink: /games/
+desc: "Playable Windows 95 games on this site: Minesweeper, Pac-Man, and Tetris."
 sidebar_exclude: true
 ---
 ## Want to play?

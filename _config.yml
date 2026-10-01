@@ -6,7 +6,7 @@ plugins:
 
 # variables
 name: Ahmed Fouad Lagha's homepage
-description: Ahmed Fouad Lagha's homepage
+description: Homepage of Ahmed Fouad Lagha, PhD candidate at Eotvos Lorand University working on synthetic data generation, privacy-preserving machine learning, and trustworthy AI.
 # File management
 exclude: ["README.md", "LICENSE", "Gemfile", "Gemfile.lock"]
 
