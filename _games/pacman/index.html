@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Pac-Man"
+permalink: /games/pacman/
 icon: "/games/pacman/pacman.icon.png"
 command: "pacman"
 ---
@@ -19,8 +20,8 @@ command: "pacman"
 </style>
 
 <div id="pacman"></div>
-<script src="pacman/pacman.js"></script>
-<script src="pacman/modernizr-1.5.min.js"></script>
+<script src="pacman.js"></script>
+<script src="modernizr-1.5.min.js"></script>
 
 <br />
 <hr />
@@ -32,7 +33,7 @@ var el = document.getElementById("pacman");
 
 if (Modernizr.canvas && Modernizr.localstorage && 
     Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
-    window.setTimeout(function () { PACMAN.init(el, "./pacman/"); }, 0);
+    window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
 } else { 
     el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
         "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";

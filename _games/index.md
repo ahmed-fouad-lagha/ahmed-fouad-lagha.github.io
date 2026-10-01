@@ -6,7 +6,7 @@ permalink: /games/
 ## Want to play?
 
 {% for game in site.games %}
-{% if game.title != "Games" %}
+{% if game.url != page.url %}
 * {{ game.title }}
     * Link: [Click me!]({{ game.url | relative_url }})
     * Command: Run `{{ game.command }}` in Start->Run

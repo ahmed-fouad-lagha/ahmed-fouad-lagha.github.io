@@ -7,7 +7,7 @@ class: "blog"
 ## Blogs
 
 {% for blog in site.blogs %}
-{% if blog.title != "Blogs" %}
+{% if blog.url != page.url %}
 * ({{ blog.show_date }}) [{{blog.title}}]({{ blog.url | relative_url }})
     * {{ blog.desc }}
 {% endif %}
