@@ -34,22 +34,15 @@
             </ul>
         </div>
     {% endif %}
-    {% if (current_collection == "blogs" or current_collection == "games") and page.url != '/blogs/' and page.url != '/games/' or current_collection == "cv" %}
+    {% if current_collection == "blogs" or current_collection == "games" or current_collection == "cv" %}
         <div class="post_total">
-            {% if current_collection == "blogs" or current_collection == "games" or current_collection == "cv" %}
-                {% assign object_count = site[current_collection] | size | minus: 1 %}
-                <div class="left">{{ object_count }} object(s)</div>
-            {% else %}
-                <div class="left">{{ site.data.navigation | size }} object(s)</div>
-            {% endif %}
+            <div class="left">{{ site[current_collection] | size | minus: 1 }} object(s)</div>
             <div class="right">&nbsp;</div>
         </div>
     {% else %}
-        {% if current_collection == "" %}
-            <div class="post_total">
-                <div class="left">{{ site.data.navigation | size }} object(s)</div>
-                <div class="right">&nbsp;</div>
-            </div>
-        {% endif %}
+        <div class="post_total">
+            <div class="left">{{ site.data.navigation | size }} object(s)</div>
+            <div class="right">&nbsp;</div>
+        </div>
     {% endif %}
 </aside>
