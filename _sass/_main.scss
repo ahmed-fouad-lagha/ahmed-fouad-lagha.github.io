@@ -288,15 +288,6 @@ ul.topbar {
         margin: 25px 0 5px 0;
     }
 
-    /* h1 and h2 are spaced above; the reset zeroes the rest, so h3 and
-       below sit flush against the preceding paragraph. Continues the
-       halving scale from h1 (50px) to h2 (25px), keeping h2's 5px bottom
-       margin since a heading introduces body text. */
-    h3, h4, h5, h6 {
-        font-weight: 700;
-        margin: 15px 0 5px 0;
-    }
-
     em {
         font-style: italic;
     }
@@ -361,9 +352,6 @@ ul.topbar {
 
     pre {
         margin-bottom: 15px;
-        /* The reset sets `font: inherit` on pre, so code blocks otherwise
-           render in the body stack and lose their monospaced alignment. */
-        font-family: monospace;
     }
 }
 

@@ -59,32 +59,9 @@
     text-align: center;
 }
 
-/* Blog styles. Typography is deliberately NOT set here: the post body
-   inherits the site values from .post_content (13px body stack, 150%
-   leading, #0000ff links, 8px black blockquote rule, 3px hr) so a post
-   reads as part of the Win95 window rather than a modern page inside it.
-   Only layout that the shared rules cannot express belongs in this block. */
-
-.blog {
-    margin: 0;
-    padding: 0;
-}
-
-/* The window title bar already shows the post title, so the first
-   element in the body should sit tight under it. */
-.blog > :first-child {
-    margin-top: 0;
-}
-
-/* Post images should not inherit the 14px float used by the sidebar. */
-.blog img {
-    float: none;
-    max-width: 100%;
-    height: auto;
-    margin: 15px 0;
-}
-
-/* Blog index: date above a linked title, description beneath. */
+/* Blog index: date above a linked title, description beneath.
+   Scoped under .blog because assets/css/blog.css sets list styling on
+   .blog ul and loads after this stylesheet. */
 .blog .blog_list {
     list-style: none;
     padding-left: 0;
@@ -101,7 +78,7 @@
 .blog_date {
     display: block;
     font-size: 85%;
-    color: #555555;
+    color: #888888;
 }
 
 .blog_link {

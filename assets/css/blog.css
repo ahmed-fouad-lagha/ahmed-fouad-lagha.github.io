@@ -1,0 +1,121 @@
+.blog {
+  color: #000;
+  /* Named stack rather than the generic `sans-serif, serif, monospace`
+     it would otherwise inherit, so post body text renders consistently
+     across machines. */
+  font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* The title bar already shows the post title, so the first heading in the
+   body should sit tight under it. */
+.blog > :first-child {
+  margin-top: 0;
+}
+
+/* Headings - bold and elegant */
+.blog h1, .blog h2, .blog h3, .blog h4, .blog h5, .blog h6 {
+  font-family: inherit;
+  font-weight: bold;
+  color: #000;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog h1 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid #808080;
+  padding-bottom: 0.5rem;
+}
+
+.blog h2 {
+  font-size: 1.4rem;
+  border-bottom: 1px solid #c0c0c0;
+  padding-bottom: 0.3rem;
+}
+
+.blog h3 { font-size: 1.2rem; color: #000; }
+.blog h4, .blog h5, .blog h6 { font-size: 1rem; color: #000; }
+
+/* Paragraphs */
+.blog p {
+  margin: 1rem 0;
+  color: #000;
+}
+
+/* Links - subtle highlight with smooth transition */
+.blog a {
+  color: #000080;
+  text-decoration: underline;
+}
+
+/* Lists */
+.blog ul, .blog ol {
+  margin: 0.6rem 1.5rem;
+  padding-left: 1.2rem;
+}
+.blog li {
+  margin: 0.1rem 0;
+  line-height: 1.4;
+}
+
+/* Code blocks - with soft background and shadow */
+.blog pre, .blog code {
+  font-family: monospace;
+  background: #f0f0f0;
+  border: 1px solid #808080;
+  font-size: 0.9rem;
+}
+.blog pre {
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+/* Blockquotes - modern highlight style */
+.blog blockquote {
+  border-left: 4px solid #808080;
+  background: #f0f0f0;
+  padding: 0.8rem 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #000;
+}
+
+/* Horizontal line */
+.blog hr {
+  border: 0;
+  border-top: 1px dashed #ddd;
+  margin: 2rem 0;
+}
+
+/* Images - center with hover zoom */
+.blog img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border: 1px solid #808080;
+}
+
+/* Fancy table style if you have tables */
+.blog table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+.blog th, .blog td {
+  border: 1px solid #e1e1e1;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+.blog th {
+  background: #f2f2f2;
+  font-weight: 600;
+}

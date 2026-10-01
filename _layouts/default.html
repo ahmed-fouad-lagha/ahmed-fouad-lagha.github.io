@@ -16,6 +16,9 @@
         <title>{{ site.name }}</title>
         <link rel="stylesheet" type="text/css" href="{{ '/assets/css/001.css' | relative_url }}">
     {% endif %}
+    {% if current_collection == "blogs" %}
+        <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/win95.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/window.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/widgets.css' | relative_url }}">
