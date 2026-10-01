@@ -22,6 +22,18 @@ img.icon {
     top: 2px;
     position: relative;
 }
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
         
 /* ----- Contenedores ----- */
 
@@ -62,6 +74,14 @@ img.icon {
 	background-color: #000080;
 	padding: 4px;
 	position: relative;
+	min-height: 18px;
+	padding-left: 42px;
+	padding-right: 92px;
+	}
+
+#HistrixCalculator .calculator_name {
+	display: block;
+	text-align: left;
 	}
 
 #HistrixCalculator div.down div.right

@@ -19,22 +19,9 @@ sass:
 # Markdown
 markdown: kramdown
 kramdown:
-    input: GFM
-    
+
 # Collections
 collections:
-    bio:
-        output: true
-        name: Biography
-        pos: 1
-    honors:
-        output: true
-        name: Honors
-        pos: 2
-    publications:
-        output: true
-        name: Publications
-        pos: 3
     cv:
         output: true
         name: CV
@@ -47,10 +34,6 @@ collections:
         output: true
         name: Games
         pos: 6
-    teaching:
-        output: true
-        name: Teaching
-        pos: 100
     
 defaults:
     -

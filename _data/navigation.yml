@@ -1,0 +1,14 @@
+- name: Biography
+  url: /bio/
+- name: Honors
+  url: /honors/
+- name: Publications
+  url: /publications/
+- name: CV
+  url: /cv/
+- name: Blogs
+  url: /blogs/
+- name: Games
+  url: /games/
+- name: Teaching
+  url: /teaching/
