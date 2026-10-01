@@ -3,6 +3,7 @@ layout: default
 title: "Blogs"
 permalink: /blogs/
 class: "blog"
+sidebar_exclude: true
 ---
 ## Blogs
 

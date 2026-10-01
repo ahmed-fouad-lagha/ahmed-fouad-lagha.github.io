@@ -2,6 +2,7 @@
 layout: default
 title: "Games"
 permalink: /games/
+sidebar_exclude: true
 ---
 ## Want to play?
 

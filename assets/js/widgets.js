@@ -27,6 +27,9 @@ fix window spawn positioning bug and get the 'open' and 'cancel' buttons to work
 
 $( document ).ready(function(){
     //console.log("Widget Creation Syntax: makeWidget('Icon URL/False', 'Window Title', 'HTML', Taskbar Boolean, Minimize Boolean, Question Boolean, Center Boolean, Width, Height, 'Custom Class');");
+    $('#win_start_tli_run').on('click', function() {
+        run(true);
+    });
 });
 
 function makeWidget(icon, title, html, taskbar, min, ques, center, wid, hei, cusClass) { /* IT WORKS!!! What's the catch? */
