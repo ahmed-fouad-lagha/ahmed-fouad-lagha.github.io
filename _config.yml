@@ -8,8 +8,7 @@ plugins:
 name: Ahmed Fouad Lagha's homepage
 description: Ahmed Fouad Lagha's homepage
 # File management
-include: [".htaccess"]
-exclude: ["README.md", "LICENSE", "TODO.txt", "Gemfile", "Gemfile.lock"]
+exclude: ["README.md", "LICENSE", "Gemfile", "Gemfile.lock"]
 
 # Sass
 sass:

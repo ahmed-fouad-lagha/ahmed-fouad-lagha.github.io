@@ -310,7 +310,11 @@ ul.topbar {
         li {
             padding: 5px;
 
+            /* Nested lists inherit the parent's square marker, which leaves the
+               sub-items looking like a continuation of the line above rather
+               than children. A hollow circle reads as a lower level. */
             ul {
+                list-style: circle;
                 margin: 10px 0 0 15px;
 
                 li {

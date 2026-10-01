@@ -107,11 +107,11 @@ function run(start) { // the run box
     var runJsLink = $("<script src='{{ '/assets/js/run.js' | relative_url }}'>");
     $("head").append(runJsLink);
     //html code below
-    var sec1 = '<div class="win_wid_run_tgt"></div><div id="win_wid_run_container"> <div id="win_wid_run_icondiv"> <img src="{{ '/assets/img/run_icon.png' | relative_url }}"> ';
+    var sec1 = '<div class="win_wid_run_tgt"></div><div id="win_wid_run_container"> <div id="win_wid_run_icondiv"> <img src="{{ '/assets/img/run_icon.png' | relative_url }}" alt=""> ';
     var sec2 = '</div> <p id="win_wid_run_text"> Type the name of a program, folder, or document, and<br> ';
     var sec3 = 'Windows will open it for you. </p> <p id="win_wid_run_opent"> <span class="win_underline">O';
-    var sec4 = '</span>pen: </p> <input type="text" id="win_wid_run_input" autofocus onkeyup="if(event.keyCode==13){runOK();}"> <button id="win_wid_run_obutton" onClick="runOK()" disabled autofocus>';
-    var sec5 = 'OK</button> <button class="win_wid_run_cbutton" id="test" onClick="runCancel()">Cancel</button> <button class="win_wid_run_bbutton" onClick="runBrowse()">';
+    var sec4 = '</span>pen: </p> <input type="text" id="win_wid_run_input" autofocus> <button type="button" id="win_wid_run_obutton" disabled>';
+    var sec5 = 'OK</button> <button type="button" class="win_wid_run_cbutton" id="win_wid_run_cancel">Cancel</button> <button type="button" class="win_wid_run_bbutton" id="win_wid_run_browse">';
     var sec6 = 'Browse...</button> </div>';
     var widgetHTML = sec1 + sec2 + sec3 + sec4 + sec5 + sec6; // combine html code
     // time to make the widgets...
@@ -121,11 +121,23 @@ function run(start) { // the run box
     $( '#win_wid_run_input' ).on('input', function() {
         var tbVal = $( '#win_wid_run_input' ).val();
         if(tbVal.length > 0) { // input != empty
-            $( '#win_wid_run_obutton' ).removeAttr('disabled');
+            $( '#win_wid_run_obutton' ).prop('disabled', false);
         } else { // input is empty
             $( '#win_wid_run_obutton' ).prop('disabled', true);
         }
     });
+    /* Handlers are bound here rather than as inline attributes, which are
+       injected with the markup and so cannot reach these functions once the
+       HTML has been parsed into a string. */
+    $( '#win_wid_run_input' ).on('keydown', function(event) {
+        if(event.key === 'Enter') {
+            event.preventDefault();
+            runOK();
+        }
+    });
+    $( '#win_wid_run_obutton' ).on('click', runOK);
+    $( '#win_wid_run_cancel' ).on('click', runCancel);
+    $( '#win_wid_run_browse' ).on('click', runBrowse);
 }
 function runOK() {
     var boxVal = $( "#win_wid_run_input" ).val();
@@ -150,11 +162,12 @@ function runClose() {
 function winverStart() {
     var html1 = '<div class="win_wid_winver_tgt"></div><div id="win_wid_winver_container">';
     var html2 = '<span id="win_wid_winver_name" class="win_wid_winver_text">Windows 95</span>';
-    var html3 = '<img id="win_wid_winver_icon" src="{{ '/assets/img/winver_logo.png' | relative_url }}">';
+    var html3 = '<img id="win_wid_winver_icon" src="{{ '/assets/img/winver_logo.png' | relative_url }}" alt="">';
     var html4 = '<span id="win_wid_winver_copy" class="win_wid_winver_text">Copyright &copy; 1981-1995, Microsoft Corp.</span>';
-    var html5 = '<button id="win_wid_winver_ok" onclick="closeWinver()">OK</button></div>';
+    var html5 = '<button id="win_wid_winver_ok" type="button">OK</button></div>';
     var winverHTML = html1 + html2 + html3 + html4 + html5;
     makeWidget(false, "Windows", winverHTML, true, false, false, true, 300, 130, "win_wid_winver_dialog");
+    $( '#win_wid_winver_ok' ).on('click', closeWinver);
 }
 function closeWinver() {
     // get the grandparent of the placeholder div (aka: win_window)
@@ -173,12 +186,13 @@ function windowsError(icon, title, msg) {
     var sec1 = '<div class="win_wid_error_tgt"></div><div class="win_wid_error_container">';
     var sec2 = '<div class="win_wid_error_concont"><div class="win_wid_error_icondiv"><img src="';
     // icon img url
-    var sec3 = '" class="win_wid_error_icon"></div><p class="win_wid_error_text">';
+    var sec3 = '" class="win_wid_error_icon" alt="Error"></div><p class="win_wid_error_text">';
     // message text
     var sec4 = '</p></div><p class="win_wid_error_buttoncont">';
-    var sec5 = '<button class="win_wid_error_close" onclick="errorClose()">OK</button></p></div>';
+    var sec5 = '<button class="win_wid_error_close" type="button">OK</button></p></div>';
     var errorHTML = sec1 + sec2 + iconURL + sec3 + msg + sec4 + sec5;
     makeWidget(false, title, errorHTML, false, false, false, true, 340, 140, "win_wid_error_dialog");
+    $( '.win_wid_error_close' ).on('click', errorClose);
 }
 function errorClose() {
     var win_id = $( ".win_wid_error_tgt" ).parent().parent().attr('id');
