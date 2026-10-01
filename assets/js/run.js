@@ -12,8 +12,6 @@ function aliasRun(rawCommand) {
         windowsError(1, "Unavailable", "The debug command is not available.");
     } else if (command == "winver") {
         winverStart();
-    } else if (command == "calc") {
-        window.location.href = "{{ '/games/calculator/' | relative_url }}";
     } else if (command == "winmine") {
         window.location.href = "{{ '/games/minesweeper/' | relative_url }}";
     } else if (command == "pacman") {

@@ -226,6 +226,9 @@ ul.topbar {
     margin:4px 0 4px 13px;
     padding:4px 0 4px 20px;
 }
+#tag-list li ul li:last-child {
+    margin-bottom: 20px;
+}
 .post_total {
     .left, .right {
         border: 1px solid;
