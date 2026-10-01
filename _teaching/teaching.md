@@ -4,7 +4,7 @@ title: "Teaching & Mentorship"
 permalink: /teaching/
 ---
 
-# Teaching & Mentorship
+## Teaching & Mentorship
 
 I design practical learning experiences in machine learning security, privacy, and trustworthy AI. My teaching focuses on helping students connect technical foundations with realistic security and privacy challenges.
 
