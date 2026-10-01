@@ -16,11 +16,9 @@ $(function() {
         var idText = anchors.urlify("table-" + uniqueTextForTable); 
         $el.attr("id", idText); 
     });
-    anchors.options.visible = 'always'; 
-    anchors.add('.post_content h1, h2, h3, h4, h5, h6');
+    anchors.options.visible = 'always';
+    anchors.add('.post_content h1, .post_content h2, .post_content h3, .post_content h4, .post_content h5, .post_content h6');
     anchors.options.icon = '❡';
     anchors.options.placement = 'left';
     anchors.options.visible = 'hover';
-    anchors.add('.post_content p');
-    anchors.add('.post_content table');
 });

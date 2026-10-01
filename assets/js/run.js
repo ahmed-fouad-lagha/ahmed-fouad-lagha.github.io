@@ -7,11 +7,9 @@
 // we should eventually replace the hardcoded aliases here with a database-type system
 // loaded dynamically
 function aliasRun(rawCommand) {
-    var command = rawCommand.toLowerCase(); // for case insensitivity
+    var command = rawCommand.trim().toLowerCase(); // for case insensitivity
     if(command == "debug") {
-        var debugJsLink = $("<script src='system/debug/debug.js'>");
-        $("head").append(debugJsLink);
-        winDebug();
+        windowsError(1, "Unavailable", "The debug command is not available.");
     } else if (command == "winver") {
         winverStart();
     } else if (command == "calc") {
@@ -23,9 +21,9 @@ function aliasRun(rawCommand) {
     } else if (command == "tetris") {
         window.location.href = "{{ '/games/tetris.html' | relative_url }}";
     } else if (command == "miao") {
-        window.open("http://image.baidu.com/search/index?tn=baiduimage&ipn=r&cl=2&lm=-1&st=-1&fm=index&fr=&hs=0&sf=1&fmq=&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=cat");
-    } else if (command == false) {
-    
+        window.open("https://image.baidu.com/search/index?tn=baiduimage&ipn=r&cl=2&lm=-1&st=-1&fm=index&fr=&hs=0&sf=1&fmq=&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=cat", "_blank", "noopener,noreferrer");
+    } else if (command == "") {
+        return;
     } else {
         windowsError(1, "Error", "Command not found!");
     }

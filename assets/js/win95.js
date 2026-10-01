@@ -16,7 +16,7 @@ BUGS TO BE FIXED:
 var window_set = 0; // must be set to zero for proper function of the window generator
 var debug = false; // debug variable, set to true for console output
 var titbHeight = 18; // titlebar height in pixels
-var defaultImage = "icons/default16.png"; // default taskbar and titlebar icon (16 x 16)
+var defaultImage = "{{ '/assets/img/file.ico' | relative_url }}"; // default taskbar and titlebar icon (16 x 16)
 
 // AUTORUN FUNCTION (Classes and Start Menu)
 $( document ).ready(function(){
