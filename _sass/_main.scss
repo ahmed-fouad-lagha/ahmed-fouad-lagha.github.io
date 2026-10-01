@@ -186,6 +186,10 @@ ul.topbar {
 .tag_list {
     width: 98.7%;
     margin: 0 auto;
+    /* Space above the first item, inside the panel border. Using padding
+       rather than margin keeps the 2px ridge border at its normal weight
+       instead of leaving a gap above it that reads as a thicker bar. */
+    padding-top: 10px;
     min-height: 0;
     max-height: 40%;
     overflow-y: auto;
