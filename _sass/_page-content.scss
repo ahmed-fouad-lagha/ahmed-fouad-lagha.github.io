@@ -59,10 +59,27 @@
     text-align: center;
 }
 
-/* Blog index: date above a linked title, description beneath.
-   Scoped under .blog because assets/css/blog.css sets list styling on
-   .blog ul and loads after this stylesheet. */
-.blog .blog_list {
+/* Blog styles. The post body deliberately sets no typography of its own:
+   it inherits the site values from .post_content (13px body, 150% leading,
+   #0000ff links, 8px black blockquote rule, 3px hr, 1px #222 tables) so a
+   post reads as part of the Win95 window rather than a modern page inside
+   it. Only layout those shared rules cannot express belongs here. */
+
+/* The window title bar already shows the post title, so the first element
+   in the body should sit tight under it. */
+.blog > :first-child {
+    margin-top: 0;
+}
+
+/* Keep a wide image from forcing the horizontal scrollbar that
+   .post_content (overflow-x: scroll) would otherwise show. */
+.blog img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Blog index: date above a linked title, description beneath. */
+.blog_list {
     list-style: none;
     padding-left: 0;
 }
@@ -78,16 +95,16 @@
 .blog_date {
     display: block;
     font-size: 85%;
-    color: #888888;
+    /* #888888 was about 3.5:1 on the #fff8ff panel; #555555 clears 4.5:1. */
+    color: #555555;
 }
 
 .blog_link {
     font-weight: bold;
 }
 
-.blog .blog_desc {
+.blog_desc {
     margin: 0.3em 0 0;
-    font-size: 100%;
     line-height: 150%;
 }
 

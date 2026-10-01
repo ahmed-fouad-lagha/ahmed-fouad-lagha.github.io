@@ -288,6 +288,28 @@ ul.topbar {
         margin: 25px 0 5px 0;
     }
 
+    /* h1 and h2 are the only headings the site sizes; the reset leaves
+       h3-h6 at body size with no margins, so a section heading renders as
+       plain bold text. Continue the 2px step the site already uses from
+       h1 (20px) to h2 (18px): h3 16px, h4 14px. h5/h6 stop at the 13px
+       body size so they never shrink below the surrounding text. */
+    h3, h4, h5, h6 {
+        font-weight: 700;
+        margin: 15px 0 5px 0;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    h5, h6 {
+        font-size: 13px;
+    }
+
     em {
         font-style: italic;
     }
@@ -310,6 +332,11 @@ ul.topbar {
     ul {
         list-style: square;
         margin: 0 0 15px 30px;
+        /* The reset collapses leading to 1.0 here; paragraphs use 150%, so
+           wrapped list items were much tighter than the surrounding text.
+           Set on the container so explicit li line-heights (honor_li,
+           publication_li) still override it. */
+        line-height: 150%;
 
         li {
             padding: 5px;
@@ -331,6 +358,7 @@ ul.topbar {
     ol {
         list-style: decimal-leading-zero;
         margin: 0 0 15px 30px;
+        line-height: 150%;
 
         li {
             padding: 5px;
@@ -352,6 +380,10 @@ ul.topbar {
 
     pre {
         margin-bottom: 15px;
+        /* The reset sets `font: inherit` on pre, so code blocks otherwise
+           render in the body stack and lose their column alignment. `code`
+           is excluded from the reset and already falls back to monospace. */
+        font-family: monospace;
     }
 }
 
