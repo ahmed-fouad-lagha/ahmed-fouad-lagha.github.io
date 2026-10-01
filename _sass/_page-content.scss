@@ -59,6 +59,38 @@
     text-align: center;
 }
 
+/* Blog index: date above a linked title, description beneath.
+   Scoped under .blog because assets/css/blog.css sets list styling on
+   .blog ul and loads after this stylesheet. */
+.blog .blog_list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.blog_entry {
+    margin-bottom: 1.4em;
+}
+
+.blog_entry:last-child {
+    margin-bottom: 0;
+}
+
+.blog_date {
+    display: block;
+    font-size: 85%;
+    color: #888888;
+}
+
+.blog_link {
+    font-weight: bold;
+}
+
+.blog .blog_desc {
+    margin: 0.3em 0 0;
+    font-size: 100%;
+    line-height: 150%;
+}
+
 .publication_title {
     display: block;
     font-weight: bold;

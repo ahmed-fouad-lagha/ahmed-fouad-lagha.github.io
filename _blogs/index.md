@@ -5,11 +5,14 @@ permalink: /blogs/
 class: "blog"
 sidebar_exclude: true
 ---
-## Blogs
-
-{% for blog in site.blogs %}
-{% if blog.url != page.url %}
-* ({{ blog.show_date }}) [{{blog.title}}]({{ blog.url | relative_url }})
-    * {{ blog.desc }}
-{% endif %}
-{% endfor %}
+<ul class="blog_list">
+    {% for blog in site.blogs %}
+    {% if blog.url != page.url %}
+    <li class="blog_entry">
+        <span class="blog_date">{{ blog.show_date }}</span>
+        <a class="blog_link" href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
+        <p class="blog_desc">{{ blog.desc }}</p>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
