@@ -489,6 +489,17 @@ ul.topbar {
     }
 }
 
+.content.home_content {
+    background: transparent;
+    border: 0;
+    padding: 0;
+
+    .post_content {
+        background: transparent;
+        border: 0;
+    }
+}
+
 @media (max-width: 900px) {
     .wrapper,
     .content {

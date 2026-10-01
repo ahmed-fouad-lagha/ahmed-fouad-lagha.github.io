@@ -42,7 +42,7 @@
     {% if current_collection == "blogs" %}
         <script src="{{ '/assets/js/anchor_links.js' | relative_url }}"></script>
     {% endif %}
-    <div class="wrapper">
+    <aside class="wrapper" aria-label="Site navigation">
         <div class="default_title">
             <img src="{{ '/assets/img/mycomputer.png' | relative_url }}" alt="" />
             <h1>{{ site.name }}</h1>
@@ -86,17 +86,19 @@
             {% endif %}
             <div class="right">&nbsp;</div>
         </div>
-    </div>
+    </aside>
     {% if page.title %}
-        <div class="content">
-            <div class="post_title">
-                <img src="{{ page.icon | relative_url }}" alt="" />
-                <h1>{{  page.title  }}</h1>
-                <a href="{{ '/' | relative_url }}" aria-label="Home"><div class="close_button"></div></a>
-            </div>
-            <ul class="topbar">
-                <li>Last updated: {{ site.time | date: '%B %-d, %Y' }}</li>
-            </ul>
+        <main class="content{% if page.class == "home_page" %} home_content{% endif %}">
+            {% unless page.class == "home_page" %}
+                <div class="post_title">
+                    <img src="{{ page.icon | relative_url }}" alt="" />
+                    <h1>{{ page.title }}</h1>
+                    <a href="{{ '/' | relative_url }}" aria-label="Home"><div class="close_button"></div></a>
+                </div>
+                <ul class="topbar">
+                    <li>Last updated: {{ site.time | date: '%B %-d, %Y' }}</li>
+                </ul>
+            {% endunless %}
             <div class="post_content" id="post">
                 {% if page.class %}
                     <div class="{{ page.class }}">
@@ -108,7 +110,7 @@
                     </div>
                 {% endif %}
             </div>
-        </div>
+        </main>
     {% endif %}
     <script src="{{ '/assets/js/001.js' | relative_url }}"></script>
 
