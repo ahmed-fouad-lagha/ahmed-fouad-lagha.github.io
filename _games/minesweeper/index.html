@@ -13,14 +13,22 @@ command: "winmine"
         <button type="button" data-level="beginner">Beginner</button>
         <button type="button" data-level="intermediate">Intermediate</button>
         <button type="button" data-level="expert">Expert</button>
-        <label><input type="checkbox" data-flag-mode /> Flag mode</label>
     </div>
-    <div class="minesweeper_status" aria-live="polite">
-        <span>Mines: <strong data-mines>10</strong></span>
-        <span>Time: <strong data-time>0</strong>s</span>
-        <button type="button" data-reset>New game</button>
+
+    <div class="minesweeper_panel">
+        <div class="minesweeper_status">
+            <span class="minesweeper_counter" aria-label="Mines remaining">000</span>
+            <button type="button" class="minesweeper_reset" data-reset aria-label="New game">:-)</button>
+            <span class="minesweeper_counter" data-timer aria-label="Elapsed time">000</span>
+        </div>
+        <div class="minesweeper_board" data-board role="grid" aria-label="Minesweeper board"></div>
     </div>
-    <div class="minesweeper_board" data-board role="grid" aria-label="Minesweeper board"></div>
+
+    <p class="minesweeper_message" data-message role="status" aria-live="polite"></p>
 </section>
+
+<br />
+<hr />
+Game logic adapted from <a href="https://github.com/aviad-benhamo/ca-minesweeper" target="_blank" rel="noopener noreferrer">ca-minesweeper</a>, under the <a href="https://github.com/aviad-benhamo/ca-minesweeper/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>.
 
 <script src="minesweeper.js"></script>
