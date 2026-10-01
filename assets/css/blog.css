@@ -1,12 +1,21 @@
 .blog {
   color: #000;
-  font-family: inherit;
+  /* Named stack rather than the generic `sans-serif, serif, monospace`
+     it would otherwise inherit, so post body text renders consistently
+     across machines. */
+  font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   max-width: 100%;
   margin: 0;
   padding: 0;
   line-height: 1.8;
   font-size: 1rem;
   box-sizing: border-box;
+}
+
+/* The title bar already shows the post title, so the first heading in the
+   body should sit tight under it. */
+.blog > :first-child {
+  margin-top: 0;
 }
 
 /* Headings - bold and elegant */
