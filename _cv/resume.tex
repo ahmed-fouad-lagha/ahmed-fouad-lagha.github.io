@@ -1,12 +1,30 @@
 \documentclass[10pt]{article}
-%============
-% STYLE SHEET
-%============
-\usepackage{style}
 
-%====================
-% CONTACT INFORMATION
-%====================
+\usepackage[T1]{fontenc}
+\usepackage[default,semibold]{sourcesanspro}
+\usepackage[margin=.5in, top=.15in, bottom=.3in, headheight=54pt, headsep=4pt, includehead]{geometry}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage[explicit]{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+
+\definecolor{highlight}{RGB}{61, 90, 128}
+
+% Section formatting
+\titleformat{\section}{\color{highlight}\scshape\raggedright\large}{}{0em}{#1~\hrulefill}
+\titlespacing*{\section}{0em}{0.25em}{0.15em}
+\titleformat{\subsection}{\bfseries}{}{0em}{#1}[]
+\titlespacing*{\subsection}{0em}{0.4em}{0.12em}
+
+% Tight itemize
+\setlist[itemize]{align=parleft, left=0pt..1em, itemsep=0pt, parsep=0pt, topsep=1pt}
+
+% Header (height set by geometry via headheight/headsep)
+\renewcommand{\headrulewidth}{0pt}
+
 \def\name{Ahmed Fouad Lagha}
 \def\phone{+36 20 543 8281}
 \def\city{Budapest, Hungary}
@@ -17,41 +35,30 @@
 \def\portfoliourl{https://ahmed-fouad-lagha.github.io}
 \def\portfolioname{ahmed-fouad-lagha.github.io}
 
-%====================
-% Header: Contact
-%====================
-\RequirePackage{fancyhdr}
-
 \fancypagestyle{first_page}{
-	\fancyhf{}
-	\lhead{
-		\phone \\ % PHONE    
-		\city \\ % CITY
-		\href{mailto:\email}{\email} % EMAIL
-	}
-	\chead{
-		\centering
-		{\Huge \skills{\name}} \\
-		\vspace{.25em}
-		{\color{highlight} \Large{\role}}
-	}
-	\rhead{
-		\href{\portfoliourl}{\portfolioname} \\ % Portfolio
-		\href{https://github.com/\github}{github.com/\github} \\% Github
-		\href{https://www.linkedin.com/in/\LinkedIn}{linkedin.com/in/\LinkedIn} % LinkedIn
-	}
-	\renewcommand{\headrulewidth}{0pt} % 0pt header rule
-	\setlength{\headheight}{75pt}
-	\setlength{\headsep}{1pt}
+    \fancyhf{}
+    \lhead{\phone \\ \city \\ \href{mailto:\email}{\email}}
+    \chead{\centering{\Huge\bfseries \name} \\[.25em] {\color{highlight}\Large\role}}
+    \rhead{\href{\portfoliourl}{\portfolioname} \\ \href{https://github.com/\github}{github.com/\github} \\ \href{https://www.linkedin.com/in/\LinkedIn}{linkedin.com/in/\LinkedIn}}
 }
 
-\begin{document}\pagestyle{empty}\thispagestyle{first_page}
+\pagestyle{empty}
+
+\newcommand{\skills}[1]{\textbf{#1}}
+% Colored tool chips for projects
+\newcommand{\chip}[1]{%
+	\tikz[baseline=(n.base)]\node[fill=highlight, text=white, rounded corners=5pt,
+	inner xsep=5pt, inner ysep=2pt, font=\small] (n) {#1};\hspace{3pt}}
+
+\begin{document}
+\linespread{0.95}\selectfont
+\thispagestyle{first_page}
 
 \noindent
 \begin{minipage}[t]{0.51\textwidth}
 \section{Summary}
 \raggedright
-AI/ML Engineer building production ML and LLM systems with Python, PyTorch, FastAPI, Docker, and CI/CD. Experienced in taking projects from data preparation and model development through evaluation and deployment, with a focus on privacy preserving ML, synthetic data, and RAG applications.
+AI/ML Engineer building production ML and LLM systems with Python, PyTorch, FastAPI, Docker, and CI/CD. Experienced in taking projects from data preparation and model development through evaluation and deployment, with a focus on privacy-preserving ML, synthetic data, and RAG applications.
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.46\textwidth}
@@ -63,68 +70,74 @@ AI/ML Engineer building production ML and LLM systems with Python, PyTorch, Fast
 \skills{DevOps \& Tools:} Docker, FastAPI, REST APIs, Git, CI/CD
 \end{minipage}
 
-\vspace{0.2em}
-
 \section{Professional Experience}
-\subsection{AI Engineer \texorpdfstring{\hfill}{ } Dec. 2025 -- Present}
-\subtext{MyVellum \hfill Remote}
-\begin{zitemize}
-	\item Built and containerized a FastAPI RAG service with Groq-hosted LLMs, vector-backed retrieval, and modular prompt orchestration
-	\item Implemented CI/CD evaluation gates that block deployments when retrieval-quality metrics fall below defined thresholds
-\end{zitemize}
 
-\subsection{Researcher \& Teaching Assistant \texorpdfstring{\hfill}{ } Sep. 2025 -- Present}
-\subtext{E\"otv\"os Lor\'and University -- Faculty of Informatics \hfill Budapest, Hungary}
-\begin{zitemize}
-	\item Built and optimized DP-SGD federated-learning pipelines for privacy-preserving synthetic data generation ($\varepsilon=1$)
-	\item Developed reproducible data preparation, feature engineering, and evaluation workflows for privacy-utility benchmarking
-	\item Authored and published 13 labs across 8 modules on ML security and privacy \ \href{https://elte-dsed.github.io/Intro-Data-Security}{\faGlobe}
-\end{zitemize}
+\subsection{AI Engineer | \mdseries MyVellum --- Remote \hfill \bfseries Dec. 2025 -- Present}
+\begin{itemize}
+    \item Built and containerized a FastAPI RAG service with Groq-hosted LLMs, vector-backed retrieval, and modular prompt orchestration
+    \item Implemented CI/CD evaluation gates that block deployments when retrieval-quality metrics fall below defined thresholds
+\end{itemize}
 
-\subsection{Software Engineer Intern \texorpdfstring{\hfill}{ } Jun. 2023 -- Feb. 2025}
-\subtext{ALX Africa \hfill Remote}
-\begin{zitemize}
+\subsection{Researcher \& Teaching Assistant | \mdseries E\"otv\"os Lor\'and University --- Budapest, Hungary \hfill \bfseries Sep. 2025 -- Present}
+\begin{itemize}
+    \item Built and optimized DP-SGD federated-learning pipelines for privacy-preserving synthetic data generation ($\varepsilon=1$)
+    \item Developed reproducible data preparation, feature engineering, and evaluation workflows for privacy-utility benchmarking
+\end{itemize}
+
+\subsection{Software Engineering Fellow | \mdseries ALX Africa --- Remote \hfill \bfseries Jun. 2023 -- Feb. 2025}
+\begin{itemize}
     \item Designed and implemented backend services and RESTful APIs with database integration in Linux environments
-    \item Analyzed technical specifications and system constraints to architect modular, maintainable software solutions
-    \item Collaborated across Git-based team workflows, adhering to rigorous debugging, unit testing, and documentation standards
-\end{zitemize}
-
-\vspace{-0.45em}
+    \item Built modular, maintainable software solutions through iterative development and code reviews
+\end{itemize}
 
 \section{Projects}
-\subsection{CASPER \ \href{https://github.com/ahmed-fouad-lagha/CASPER}{\texorpdfstring{\faGithub}{GitHub}} \texorpdfstring{\hfill}{ } 2026}
-\subtext{Python, Differential Privacy, RAG, T5, MedCPT, Docker \hfill IDEAL 2026, Main Track}
-\begin{zitemize}
+
+\subsection{CASPER \ \href{https://github.com/ahmed-fouad-lagha/CASPER}{\faGithub} \hfill 2026}
+\chip{Python} \chip{Differential Privacy} \chip{RAG} \chip{T5} \chip{MedCPT} \chip{Docker}
+\begin{itemize}
     \item Built a privacy-preserving RAG framework that clusters sensitive medical records with DP-KMeans and inverts noisy centroids into synthetic prototypes, enabling LLMs to retrieve on private data without accessing raw records
     \item Evaluated the privacy-utility trade-off, achieving Recall@10~=~0.91 and MIA AUC~$\approx$~0.50 (random-guessing)
-\end{zitemize}
+\end{itemize}
 
-\subsection{Context-Aware Access Control for IoT Devices \ \href{https://github.com/ahmed-fouad-lagha/IoT-Access-Sentinel}{\texorpdfstring{\faGithub}{GitHub}} \texorpdfstring{\hfill}{ } 2026}
-\subtext{FastAPI, Python, Multi-Agent LLMs, Docker, Wazuh, Prometheus \hfill ITAT'2026, WAS}
-\begin{zitemize}
+\subsection{Context-Aware Access Control for IoT Devices \ \href{https://github.com/ahmed-fouad-lagha/IoT-Access-Sentinel}{\faGithub} \hfill 2026}
+\chip{FastAPI} \chip{Python} \chip{Multi-Agent LLMs} \chip{Docker} \chip{Wazuh} \chip{Prometheus}
+\begin{itemize}
     \item Built a hybrid zero-trust IoT authorization framework combining a deterministic validation pre-filter ($<1$\,ms fast path) with multi-agent LLM reasoning (~97\,ms slow path) for autonomous context-aware access control
     \item Achieved 94.1\% decision accuracy vs.\ 82.4\% for the RBAC baseline and blocked 100\% of 105 red-team adversarial attacks, with fail-secure DENY defaults on LLM rate limits or timeouts
-\end{zitemize}
+\end{itemize}
+
+\subsection{EVA --- \'Ecole Virtuelle Alg\'erienne \ \href{https://eva-web-snowy.vercel.app}{\faGlobe} \hfill 2023 -- Present}
+\chip{Next.js} \chip{React} \chip{Tailwind CSS} \chip{EN/AR i18n} \chip{Sentry} \chip{Vercel}
+\begin{itemize}
+    \item Built and deployed a production e-learning platform serving Algerian students across primary, middle (BEM), and high school (BAC), aligned with the official national curriculum
+    \item Implemented bilingual EN/AR interfaces with full RTL layout, course search, learning paths, instructor profiles, and voucher-code offline payments; integrated Sentry for production error monitoring
+\end{itemize}
+
+\section{Publications}
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{CASPER: Contextual Anonymized Synthetic Prototypes for Enhanced Retrieval in Medical Information Systems} \hfill 2026 \par {\small Ahmed Fouad Lagha, Loubna Seddiki, Oumaima Araar, Imre Lend\'ak --- \textit{IDEAL 2026, Main Track}}
+    \item \textbf{Context-Aware Access Control for IoT Devices Using Two-Role LLM Reasoning: A Security Evaluation} \hfill 2026 \par {\small Ahmed Fouad Lagha, Loubna Seddiki, Oumaima Araar, Imre Lend\'ak --- \textit{ITAT 2026, Workshop on Applied Security (WAS)}}
+    \item \textbf{A Survey of IoMT Datasets: Availability, Applications, and Research Insights} \hfill 2026 \par {\small Loubna Seddiki, Ahmed Fouad Lagha, Imre Lend\'ak --- \textit{IEEE ICCC 2026}}
+\end{itemize}
 
 \section{Education}
-\subsection{PhD in Informatics \textnormal{(GPA: 5/5)} \texorpdfstring{\hfill}{ } Sep. 2025 -- Expected 2029}
-\edusubtext{E\"otv\"os Lor\'and University (ELTE) \hfill Budapest, Hungary}
-\thesis{Applied synthetic data generation for secure, privacy-preserving AI systems.}{Pr. Lend\'ak Imre}
 
-\subsection{M.Sc. in Artificial Intelligence -- Ranked 1st in Class \textnormal{(GPA: 3.7/4.0)} \texorpdfstring{\hfill}{ } Sep. 2023 -- Jun. 2025}
-\edusubtext{University of Khenchela \hfill Khenchela, Algeria}
-\thesis{Hair Dermoscopic Image Segmentation Using Deep Learning.}{Pr. Dalal Bardou}
+\subsection{PhD in Informatics | \mdseries E\"otv\"os Lor\'and University, Hungary \hfill \bfseries Sep. 2025 -- Expected 2029}
 
-\subsection{B.Sc. in Computer Science -- Ranked 1st in Class \textnormal{(GPA: 3.9/4.0)} \texorpdfstring{\hfill}{ } Sep. 2020 -- Jun. 2023}
-\edusubtext{University of Khenchela \hfill Khenchela, Algeria}
-\thesis{A learning management system for Algerian students \ \href{https://eva-web-snowy.vercel.app}{\faGlobe}.}{Dr. Mebarki Djemouai}
+\subsection{M.Sc. in Artificial Intelligence | \mdseries University of Khenchela, Algeria \hfill \bfseries Sep. 2023 -- Jun. 2025}
 
+\subsection{B.Sc. in Computer Science | \mdseries University of Khenchela, Algeria \hfill \bfseries Sep. 2020 -- Jun. 2023}
+
+\vspace{2pt}
 \section{Certifications \& Awards}
-\begin{zitemize}
+\begin{itemize}
     \item \textbf{Stipendium Hungaricum Scholarship:} Fully funded PhD studies at ELTE \hfill Sep. 2025
     \item \textbf{2nd Place --- Starthon'25 Hackathon:} University of El Oued, Algeria \hfill Apr. 2025
-	\item \textbf{Software Engineering (Back-end Specialization):} ALX Africa \href{https://savanna.alxafrica.com/certificates/yNTLX6BYHR}{\faCertificate} \hfill Feb. 2025
-	\item \textbf{AI Career Essentials:} ALX AiCE \href{https://savanna.alxafrica.com/certificates/YEM9LC5BNm}{\faCertificate} \hfill Jul. 2024
-\end{zitemize}
+    \item \textbf{Software Engineering (Back-end Specialization):} ALX Africa \href{https://savanna.alxafrica.com/certificates/yNTLX6BYHR}{\faCertificate} \hfill Feb. 2025
+    \item \textbf{AI Career Essentials:} ALX AiCE \href{https://savanna.alxafrica.com/certificates/YEM9LC5BNm}{\faCertificate} \hfill Jul. 2024
+\end{itemize}
+
+\section{Languages}
+\noindent Arabic (Native), Tamazight (Native), French (Fluent), English (Fluent)
 
 \end{document}
