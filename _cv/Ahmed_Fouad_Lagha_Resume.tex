@@ -35,6 +35,14 @@
 \def\portfoliourl{https://ahmed-fouad-lagha.github.io}
 \def\portfolioname{ahmed-fouad-lagha.github.io}
 
+% PDF metadata (helps ATS parsers and document properties)
+\hypersetup{
+    pdftitle={\name{} - Resume},
+    pdfauthor={\name},
+    pdfsubject={AI/ML Engineer and PhD Researcher},
+    pdfkeywords={AI/ML, LLM, RAG, privacy-preserving ML, synthetic data, Python, PyTorch, FastAPI, Docker}
+}
+
 \fancypagestyle{first_page}{
     \fancyhf{}
     \lhead{\phone \\ \city \\ \href{mailto:\email}{\email}}
@@ -102,7 +110,7 @@ AI/ML Engineer building production ML and LLM systems with Python, PyTorch, Fast
 \subsection{Context-Aware Access Control for IoT Devices \ \href{https://github.com/ahmed-fouad-lagha/IoT-Access-Sentinel}{\faGithub} \hfill 2026}
 \chip{FastAPI} \chip{Python} \chip{Multi-Agent LLMs} \chip{Docker} \chip{Wazuh} \chip{Prometheus}
 \begin{itemize}
-    \item Built a hybrid zero-trust IoT authorization framework combining a deterministic validation pre-filter ($<1$\,ms fast path) with multi-agent LLM reasoning (~97\,ms slow path) for autonomous context-aware access control
+    \item Built a hybrid zero-trust IoT authorization framework combining a deterministic validation pre-filter ($<1$\,ms fast path) with multi-agent LLM reasoning ($\sim$97\,ms slow path) for autonomous context-aware access control
     \item Achieved 94.1\% decision accuracy vs.\ 82.4\% for the RBAC baseline and blocked 100\% of 105 red-team adversarial attacks, with fail-secure DENY defaults on LLM rate limits or timeouts
 \end{itemize}
 
