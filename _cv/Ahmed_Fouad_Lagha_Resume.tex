@@ -41,7 +41,7 @@
     pdftitle={\name{} - Resume},
     pdfauthor={\name},
     pdfsubject={PhD Researcher in Privacy-Preserving Machine Learning},
-    pdfkeywords={AI/ML, LLM, RAG, privacy-preserving ML, synthetic data, Python, PyTorch, FastAPI, Docker}
+    pdfkeywords={privacy-preserving machine learning, differential privacy, DP-SGD, federated learning, synthetic data, membership inference, IoMT, PyTorch}
 }
 
 \fancypagestyle{first_page}{
@@ -67,7 +67,7 @@
 \begin{minipage}[t]{0.47\textwidth}
 \section{Summary}
 \raggedright
-PhD researcher at ELTE in privacy-preserving machine learning, focused on differentially private synthetic data (DP-SGD, federated learning, diffusion models, GANs/VAEs) and membership/attribute inference auditing, for healthcare (IoMT) and finance. Published at IDEAL, ITAT, and IEEE ICCC. Also builds and ships AI products (Sytira, Vellum).
+PhD researcher at ELTE in privacy-preserving machine learning, focused on differentially private synthetic data (DP-SGD, federated learning), membership-inference auditing, and LLM-based security, with applications in healthcare (IoMT) and IoT. Published at IDEAL, ITAT, and IEEE ICCC. Also builds and ships AI products.
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.51\textwidth}
@@ -82,40 +82,23 @@ PhD researcher at ELTE in privacy-preserving machine learning, focused on differ
 
 \section{Professional Experience}
 
-\subsection{Researcher \& Teaching Assistant | \mdseries E\"otv\"os Lor\'and University --- Budapest, Hungary \hfill \bfseries Sep. 2025 -- Present}
+\subsection{Teaching Assistant | \mdseries Department of Data Science and Engineering, ELTE --- Budapest, Hungary \hfill \bfseries Spring 2026 -- Present}
+\begin{itemize}
+    \item Teach the Introduction to Data Security Practicum, covering adversarial ML, membership inference, and DP-SGD \href{https://elte-dsed.github.io/Intro-Data-Security/}{\faIcon{external-link-alt}}
+    \item Lead all lab sessions, design the hands-on exercises, and grade student work
+    \item Supervise MSc student teams in Data Science Lab I and II on real-world projects with industrial and academic partners
+\end{itemize}
+
+\subsection{PhD Researcher | \mdseries E\"otv\"os Lor\'and University --- Budapest, Hungary \hfill \bfseries Sep. 2025 -- Present}
 \begin{itemize}
     \item Built and optimized DP-SGD federated-learning pipelines for privacy-preserving synthetic data generation ($\varepsilon=1$)
     \item Developed reproducible data preparation, feature engineering, and evaluation workflows for privacy-utility benchmarking
-    \item Teaching Assistant for the Introduction to Data Security Practicum, covering adversarial ML, privacy auditing (membership inference), and DP-SGD/federated-learning defenses \href{https://elte-dsed.github.io/Intro-Data-Security/}{\faIcon{external-link-alt}}
 \end{itemize}
 
 \subsection{Software Engineering Fellow | \mdseries ALX Africa --- Remote \hfill \bfseries Jun. 2023 -- Feb. 2025}
 \begin{itemize}
     \item Designed and implemented backend services and RESTful APIs with database integration in Linux environments
     \item Built modular, maintainable software solutions through iterative development and code reviews
-\end{itemize}
-
-\section{Projects}
-
-\subsection{Sytira --- AI Customer Support Platform \ \href{https://sytira.com}{\faGlobe} \hfill Oct. 2026 -- Present}
-\chip{Ruby on Rails} \chip{Vue.js} \chip{PostgreSQL} \chip{pgvector} \chip{Redis/Sidekiq} \chip{OpenAI}
-\begin{itemize}
-    \item Founding an early-stage platform that unifies customer conversations and automates support with LLM-powered assistants
-    \item Designing the backend services and APIs that integrate generative AI into business support workflows
-\end{itemize}
-
-\subsection{Vellum --- AI-Powered Life Story Platform \ \href{https://www.myvellum.me}{\faGlobe} \hfill 2025 -- Present}
-\chip{Next.js} \chip{TypeScript} \chip{FastAPI} \chip{Groq Llama 3.3} \chip{WebSockets} \chip{Stripe}
-\begin{itemize}
-    \item Built and shipped a full-stack AI interview platform (Next.js/TypeScript frontend, FastAPI backend) that turns voice or text interviews into premium PDF life-story books, with NextAuth v5 auth, Stripe one-time payments, and real-time WebSocket chat
-    \item Delivered production-grade engineering: EN/FR internationalization, a 120-test suite (Jest, Playwright, pytest), GitHub Actions CI/CD, Sentry monitoring, and deployment on Vercel and Render
-\end{itemize}
-
-\subsection{EVA --- \'Ecole Virtuelle Alg\'erienne \ \href{https://eva-web-snowy.vercel.app}{\faGlobe} \hfill 2023 -- Present}
-\chip{Next.js} \chip{React} \chip{Tailwind CSS} \chip{i18n} \chip{Sentry} \chip{Vercel}
-\begin{itemize}
-    \item Built and deployed a production e-learning platform serving Algerian students across primary, middle (BEM), and high school (BAC), aligned with the official national curriculum
-    \item Implemented multilingual EN/FR/AR interfaces with full RTL layout, course search, learning paths, instructor profiles, and voucher-code offline payments; integrated Sentry for production error monitoring
 \end{itemize}
 
 \section{Publications}
@@ -133,7 +116,29 @@ PhD researcher at ELTE in privacy-preserving machine learning, focused on differ
 
 \subsection{B.Sc. in Computer Science | \mdseries University of Khenchela, Algeria (GPA: 16.2/20 $\cdot$ Ranked 1st of 120) \hfill Sep. 2020 -- Jun. 2023}
 
-\vspace{2pt}
+\section{Projects}
+
+\subsection{Sytira --- AI Customer Support Platform \ \href{https://sytira.com}{\faGlobe} \hfill 2026 -- Present}
+\chip{Ruby on Rails} \chip{Vue.js} \chip{PostgreSQL} \chip{pgvector} \chip{Redis/Sidekiq} \chip{OpenAI}
+\begin{itemize}
+    \item Founding an early-stage platform that unifies customer conversations and automates support with LLM-powered assistants
+    \item Designing the backend services and APIs that integrate generative AI into business support workflows
+\end{itemize}
+
+\subsection{Vellum --- AI-Powered Life Story Platform \ \href{https://www.myvellum.me}{\faGlobe} \hfill 2024 -- 2025}
+\chip{Next.js} \chip{TypeScript} \chip{FastAPI} \chip{Groq Llama 3.3} \chip{WebSockets} \chip{Stripe}
+\begin{itemize}
+    \item Built and shipped a full-stack platform that turns voice or text interviews into PDF life-story books
+    \item Implemented Stripe payments, real-time WebSocket chat, a 120-test suite, CI/CD, and EN/FR internationalization
+\end{itemize}
+
+\subsection{EVA --- \'Ecole Virtuelle Alg\'erienne \ \href{https://eva-web-snowy.vercel.app}{\faGlobe} \hfill 2022 -- 2023}
+\chip{Next.js} \chip{React} \chip{Tailwind CSS} \chip{i18n} \chip{Sentry} \chip{Vercel}
+\begin{itemize}
+    \item Built and deployed a production e-learning platform for Algerian students, aligned with the national BEM/BAC curriculum
+    \item Implemented EN/FR/AR interfaces with full RTL layout, learning paths, and voucher-code offline payments
+\end{itemize}
+
 \section{Certifications \& Awards}
 
 \subsection{Stipendium Hungaricum Scholarship \mdseries --- Fully funded PhD studies at ELTE \hfill Sep. 2025}
@@ -141,8 +146,6 @@ PhD researcher at ELTE in privacy-preserving machine learning, focused on differ
 \subsection{2nd Place Starthon'25 Hackathon \mdseries --- University of El Oued, Algeria \hfill Apr. 2025}
 
 \subsection{Software Engineering (Back-end Specialization) \mdseries --- ALX Africa \href{https://savanna.alxafrica.com/certificates/yNTLX6BYHR}{\faIcon{external-link-alt}} \hfill Feb. 2025}
-
-\subsection{AI Career Essentials \mdseries --- ALX AiCE \href{https://savanna.alxafrica.com/certificates/YEM9LC5BNm}{\faIcon{external-link-alt}} \hfill Jul. 2024}
 
 \section{Languages}
 
